@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Контакты — стоматология «Миро-Дент», Краснодар</title>
+<meta name="description" content="Контакты стоматологии «Миро-Дент»: посёлок Знаменский, Природная ул., 10Б, корп. 6. Телефон, WhatsApp, Telegram, часы работы.">
+<link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32.png">
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Golos+Text:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--bg-soft:#f6f8fb;--ink:#202936;--body:#68707b;--muted:#89919c;
+  --accent:#165db4;--accent-ink:#0d4d98;--accent-soft:#eaf2fc;--line:#e4e8ee;--star:#f2b900;
+  --shadow:0 15px 42px rgba(22,40,63,.07);
+  --c-red:#ef3028;--c-blue:#165db4;--c-green:#28914c;--c-yellow:#f2b900;
+  --r:18px;--r-sm:12px;
+  --pad:clamp(20px,6vw,96px);--sp:clamp(74px,9vw,120px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font:400 17px/1.65 "Golos Text",Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:800;color:var(--ink);letter-spacing:-.025em;margin:0}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.08}
+h2{font-size:clamp(28px,3.6vw,44px);line-height:1.09}
+h3{font-size:19px}
+p{margin:0}
+::selection{background:var(--accent);color:#fff}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:#c9d6e8;border-radius:10px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+.section{padding:var(--sp) 0;position:relative}
+.section::before{content:"";position:absolute;width:72px;height:72px;border:1.5px solid rgba(22,93,180,.16);border-radius:8px;transform:rotate(45deg);pointer-events:none}
+.section:nth-of-type(odd)::before{left:-52px;top:80px}
+.section:nth-of-type(even)::before{right:-52px;top:90px}
+@media(max-width:1120px){.section::before{display:none}}
+
+.eyebrow{display:inline-block;padding:8px 16px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font:700 11.5px/1 "Manrope",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 24px;border-radius:999px;font:700 14px/1 "Manrope",sans-serif;white-space:nowrap;transition:transform .15s ease,background .2s ease,border-color .2s ease,color .2s ease}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(22,93,180,.2)}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{border:1.5px solid var(--accent);color:var(--accent);background:#fff}
+.btn-ghost:hover{background:#f4f8fd;border-color:var(--accent-ink);color:var(--accent-ink)}
+.btn-ghost:active{transform:translateY(1px)}
+
+.scrollprog{position:fixed;top:0;left:0;height:3px;width:100%;z-index:80;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;transition:transform .08s linear}
+
+.header{position:fixed;z-index:60;inset:0 0 auto 0;height:74px;display:flex;align-items:center;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .28s ease,height .28s ease}
+.header.compact{box-shadow:0 6px 24px rgba(18,35,58,.08)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:24px;max-width:1440px}
+.brand{display:flex;align-items:center;gap:9px}
+.brand-mark{width:56px;height:60px;object-fit:contain;flex:none}
+.brand-wordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:.8;color:var(--ink)}
+.brand-wordmark small{font:700 13px/1 "Manrope",sans-serif;letter-spacing:.01em}
+.brand-wordmark strong{font:400 30px/1 "Marck Script","Golos Text",cursive;letter-spacing:-.03em}
+.header .brand-wordmark{text-transform:none;letter-spacing:normal;flex:none}
+.header .brand .header-city{display:block;margin-top:5px;font:500 10px/1.2 "Manrope",sans-serif;letter-spacing:.02em;text-transform:none;color:#68717c}
+.nav{display:flex;gap:26px}
+.nav a{font:500 14px/1 "Golos Text",sans-serif;color:var(--ink);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--accent);border-radius:2px;transition:right .25s ease}
+.nav a:hover{color:var(--accent)}
+.nav a:hover::after,.nav a.active::after{right:0}
+.nav a.active{color:var(--accent-ink);font-weight:600}
+.header .btn-primary{padding:12px 20px;background:#fff;color:var(--accent);border:1.5px solid var(--accent);box-shadow:none}
+.header .btn-primary:hover{background:var(--accent);color:#fff}
+.header-call svg{width:15px;height:15px}
+@media(max-width:920px){
+  .nav{display:none}
+  .brand-mark{width:48px;height:52px}
+  .brand-wordmark strong{font-size:25px}
+  .header-call{font-size:0;padding:12px!important}
+  .header-call svg{margin:0;width:18px!important;height:18px!important}
+}
+
+.phero{padding:calc(74px + clamp(34px,6vw,58px)) 0 clamp(10px,1.5vw,16px);background:#fff;position:relative;overflow:hidden}
+.phero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 24%,rgba(30,94,170,.07),transparent 42%);pointer-events:none}
+.phero-in{max-width:680px;position:relative;z-index:1}
+.phero h1{margin:0}
+.phero h1::after{content:"";display:block;width:180px;height:4px;margin-top:24px;background:linear-gradient(90deg,var(--c-red) 0 25%,var(--c-blue) 25% 50%,var(--c-green) 50% 75%,var(--c-yellow) 75%);border-radius:4px}
+.phero + .section{padding-top:clamp(14px,2vw,22px)}
+
+.contact-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,72px);align-items:start;margin-top:22px}
+.phone{display:inline-block;font:800 clamp(25px,3.2vw,42px)/1 "Manrope",sans-serif;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em}
+.phone:hover{color:var(--accent)}
+.contact-top address{font-style:normal;font-size:15.5px;color:var(--body);display:block}
+.transit{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:9px}
+.transit li{font-size:14px;line-height:1.45;color:var(--body);padding-left:20px;position:relative}
+.transit li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.transit li b{color:var(--ink);font:700 13px/1 "Manrope",sans-serif}
+.contact-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:22px 24px}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;font-size:14.5px;color:var(--ink);border-bottom:1px solid var(--line)}
+.hours div:last-child{border-bottom:0}
+.hours span{color:var(--muted)}
+.map{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 20px 48px rgba(22,40,63,.12);height:clamp(320px,42vw,500px);border:10px solid #fff;margin-top:36px}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.15)}
+.map-card{position:absolute;left:22px;bottom:22px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow)}
+.map-card b{display:block;font-family:"Manrope",sans-serif;color:var(--ink);font-size:16px}
+.map-card small{color:var(--muted);font-size:12.5px}
+@media(max-width:820px){.contact-top{grid-template-columns:1fr}}
+
+.footer{background:#202936;padding:42px 0}
+.footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer .brand-wordmark,.footer .brand-wordmark small,.footer .brand-wordmark strong{color:#fff}
+.footer p{font-size:12px;color:#aeb7c3;max-width:46ch}
+.footer-links{display:flex;gap:20px;font:600 13px/1 "Manrope",sans-serif;color:#dbe1e8}
+.footer-links a:hover{color:#fff}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.scrollprog{display:none}}
+</style>
+<style>
+/* Shared responsive layout and navigation. */
+.section{overflow-x:clip}
+.menu-toggle{display:none}
+.menu-toggle:focus-visible,.nav a:focus-visible{outline:3px solid #165db4;outline-offset:4px}
+@media(max-width:1150px){
+  .header .wrap{gap:10px}
+  .header .nav{display:none}
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:0;border:1px solid #165db4;border-radius:12px;background:#fff;color:#165db4;font:700 12px/1 "Manrope",sans-serif;cursor:pointer;margin-left:auto}
+  .header .header-call{font-size:0;padding:12px!important;flex:none}
+  .header .header-call svg{width:18px!important;height:18px!important;margin:0}
+  .header .nav.mobile-open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:12px var(--pad) 20px;background:#fff;border-bottom:1px solid #e4e8ee;box-shadow:0 16px 24px #20293612;max-height:calc(100dvh - 80px);overflow-y:auto}
+  .header .nav.mobile-open a{display:block;padding:14px 0;font-size:16px;line-height:1.3}
+}
+@media(max-width:720px){
+  .contact-cta .btn{white-space:normal;line-height:1.4}
+  .footer-links{flex-wrap:wrap}
+}
+</style>
+<script src="mobile-nav.js" defer></script>
+<script src="scroll-progress.js" defer></script>
+</head>
+<body>
+
+<div class="scrollprog" id="scrollprog"></div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-mark" src="public/brand-mark.png" alt=""><span class="brand-wordmark"><small>стоматология</small><strong>Миро-Дент</strong><span class="header-city">Знаменский</span></span></a>
+    <nav class="nav">
+      <a href="index.html#services">Услуги</a>
+      <a href="index.html#team">Врачи</a>
+      <a href="index.html#akcii">Акции</a>
+      <a href="prices.html">Цены</a>
+      <a href="index.html#reviews">Отзывы</a>
+      <a href="index.html#faq">Вопросы</a>
+      <a href="contacts.html" class="active">Контакты</a>
+    </nav>
+    <a class="btn btn-primary header-call" href="tel:+79885590303">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+      +7 988 559-03-03
+    </a>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap"><div class="phero-in">
+    <span class="eyebrow">Знаменский · Природная, 10Б к6</span>
+    <h1>Контакты</h1>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-top">
+      <div>
+        <a class="phone" href="tel:+79885590303">+7 (988) 559-03-03</a>
+        <address>Краснодар, посёлок Знаменский, Природная ул., 10Б, корп. 6</address>
+        <ul class="transit">
+          <li>Посёлок Знаменский, вход с улицы под вывеской «Стоматология»</li>
+          <li><b>Парковка</b> рядом с клиникой</li>
+          <li><b>Доступная среда</b> — вход и кабинеты доступны на коляске</li>
+          <li><b>Приём</b> по предварительной записи</li>
+        </ul>
+        <div class="contact-cta">
+          <a class="btn btn-primary" href="tel:+79885590303">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+            Позвонить
+          </a>
+          <a class="btn btn-ghost" href="https://yandex.ru/maps/?rtext=~45.054176%2C39.147748&rtt=auto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-12a7 7 0 1 0-14 0c0 6.3 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Маршрут
+          </a>
+        </div>
+      </div>
+      <div class="hours">
+        <div><span>Телефон</span> +7 988 559-03-03</div>
+        <div><span>WhatsApp</span> <a href="https://wa.me/79885590303" target="_blank" rel="noopener">написать</a></div>
+        <div><span>Telegram</span> <a href="https://t.me/dentoklasskrd" target="_blank" rel="noopener">@dentoklasskrd</a></div>
+        <div><span>Пн–Пт</span> 09:00–20:00</div>
+        <div><span>Сб–Вс</span> 10:00–18:00</div>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Стоматология «Миро-Дент» на Яндекс Картах" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=39.147748%2C45.054176&mode=search&oid=179695455327&ol=biz&z=16" allowfullscreen></iframe>
+      <div class="map-card">
+        <b>Миро-Дент</b>
+        <small>Природная ул., 10Б к6 · 4,9</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-mark" src="public/brand-mark.png" alt=""><span class="brand-wordmark"><small>стоматология</small><strong>Миро-Дент</strong></span></a>
+    <p>Информация не является публичной офертой. Имеются противопоказания — необходима консультация специалиста.</p>
+    <div class="footer-links">
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327/gallery/" target="_blank" rel="noopener">Фотографии</a>
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">Отзывы</a>
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327" target="_blank" rel="noopener">Яндекс Карты</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header=document.getElementById('header');
+  var sentinel=document.createElement('div');
+  sentinel.style.cssText='position:absolute;top:0;height:36px;width:1px';
+  document.body.prepend(sentinel);
+  new IntersectionObserver(function(e){header.classList.toggle('compact',!e[0].isIntersecting);}).observe(sentinel);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Услуги и цены — стоматология «Миро-Дент», Краснодар</title>
+<meta name="description" content="Полный прайс стоматологии «Миро-Дент» в посёлке Знаменский, Краснодар: терапия, хирургия, протезирование, ортодонтия, детская стоматология.">
+<link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32.png">
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Golos+Text:wght@400;500;600&family=Marck+Script&family=Lobster&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--bg-soft:#f6f8fb;--ink:#202936;--body:#68707b;--muted:#89919c;
+  --accent:#165db4;--accent-ink:#0d4d98;--accent-soft:#eaf2fc;--line:#e4e8ee;--star:#f2b900;
+  --shadow:0 15px 42px rgba(22,40,63,.07);
+  --c-red:#ef3028;--c-blue:#165db4;--c-green:#28914c;--c-yellow:#f2b900;
+  --r:18px;--r-sm:12px;
+  --pad:clamp(20px,6vw,96px);--sp:clamp(74px,9vw,120px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font:400 17px/1.65 "Golos Text",Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:800;color:var(--ink);letter-spacing:-.025em;margin:0}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.08}
+h2{font-size:clamp(28px,3.6vw,44px);line-height:1.09}
+h3{font-size:19px}
+p{margin:0}
+::selection{background:var(--accent);color:#fff}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:#c9d6e8;border-radius:10px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+.section{padding:var(--sp) 0;position:relative}
+.section::before{content:"";position:absolute;width:72px;height:72px;border:1.5px solid rgba(22,93,180,.16);border-radius:8px;transform:rotate(45deg);pointer-events:none}
+.section:nth-of-type(odd)::before{left:-52px;top:80px}
+.section:nth-of-type(even)::before{right:-52px;top:90px}
+@media(max-width:1120px){.section::before{display:none}}
+
+.eyebrow{display:inline-block;padding:8px 16px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font:700 11.5px/1 "Manrope",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 24px;border-radius:999px;font:700 14px/1 "Manrope",sans-serif;white-space:nowrap;transition:transform .15s ease,background .2s ease,border-color .2s ease,color .2s ease}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(22,93,180,.2)}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{border:1.5px solid var(--accent);color:var(--accent);background:#fff}
+.btn-ghost:hover{background:#f4f8fd;border-color:var(--accent-ink);color:var(--accent-ink)}
+.btn-ghost:active{transform:translateY(1px)}
+
+.scrollprog{position:fixed;top:0;left:0;height:3px;width:100%;z-index:80;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;transition:transform .08s linear}
+
+.header{position:fixed;z-index:60;inset:0 0 auto 0;height:74px;display:flex;align-items:center;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .28s ease,height .28s ease}
+.header.compact{box-shadow:0 6px 24px rgba(18,35,58,.08)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:24px;max-width:1440px}
+.brand{display:flex;align-items:center;gap:9px}
+.brand-mark{width:56px;height:60px;object-fit:contain;flex:none}
+.brand-wordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:.8;color:var(--ink)}
+.brand-wordmark small{font:700 13px/1 "Manrope",sans-serif;letter-spacing:.01em}
+.brand-wordmark strong{font:400 30px/1 "Marck Script","Golos Text",cursive;letter-spacing:-.03em}
+.header .brand-wordmark{text-transform:none;letter-spacing:normal;flex:none}
+.header .brand .header-city{display:block;margin-top:5px;font:500 10px/1.2 "Manrope",sans-serif;letter-spacing:.02em;text-transform:none;color:#68717c}
+.nav{display:flex;gap:26px}
+.nav a{font:500 14px/1 "Golos Text",sans-serif;color:var(--ink);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--accent);border-radius:2px;transition:right .25s ease}
+.nav a:hover{color:var(--accent)}
+.nav a:hover::after,.nav a.active::after{right:0}
+.nav a.active{color:var(--accent-ink);font-weight:600}
+.header .btn-primary{padding:12px 20px;background:#fff;color:var(--accent);border:1.5px solid var(--accent);box-shadow:none}
+.header .btn-primary:hover{background:var(--accent);color:#fff}
+.header-call svg{width:15px;height:15px}
+@media(max-width:920px){
+  .nav{display:none}
+  .brand-mark{width:48px;height:52px}
+  .brand-wordmark strong{font-size:25px}
+  .header-call{font-size:0;padding:12px!important}
+  .header-call svg{margin:0;width:18px!important;height:18px!important}
+}
+
+.phero{padding:calc(74px + clamp(34px,6vw,58px)) 0 clamp(10px,1.5vw,16px);background:#fff;position:relative;overflow:hidden}
+.phero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 24%,rgba(30,94,170,.07),transparent 42%);pointer-events:none}
+.phero-in{max-width:680px;position:relative;z-index:1}
+.phero h1{margin:0}
+.phero h1::after{content:"";display:block;width:180px;height:4px;margin-top:24px;background:linear-gradient(90deg,var(--c-red) 0 25%,var(--c-blue) 25% 50%,var(--c-green) 50% 75%,var(--c-yellow) 75%);border-radius:4px}
+.phero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+
+.phero + .section{padding-top:clamp(14px,2vw,22px)}
+.price-groups{columns:2;column-gap:22px;counter-reset:pg;margin-top:40px}
+.price-groups .pg{break-inside:avoid;display:block;margin-bottom:44px}
+.pg{--pg-accent:var(--c-red);position:relative;background:#fff;border:1px solid #e5e8ed;border-radius:22px;box-shadow:var(--shadow);padding:30px 28px 26px;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.pg:nth-child(4n+1){--pg-accent:var(--c-red)}
+.pg:nth-child(4n+2){--pg-accent:var(--c-blue)}
+.pg:nth-child(4n+3){--pg-accent:var(--c-green)}
+.pg:nth-child(4n+4){--pg-accent:var(--c-yellow)}
+.pg::before{counter-increment:pg;content:counter(pg,decimal-leading-zero);position:absolute;z-index:2;top:-19px;left:22px;width:52px;height:52px;display:grid;place-items:center;background:var(--pg-accent);color:#fff;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);font:800 15px/1 "Manrope",sans-serif}
+.pg:hover{transform:translateY(-6px);border-color:#dfe4eb;box-shadow:0 24px 50px rgba(22,40,63,.13)}
+.pg h3{margin:0}
+.pg h3::after{content:"";display:block;width:26px;height:2px;background:var(--pg-accent);margin:13px 0 2px}
+.pg dl{margin:0}
+.pg dl>div{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:13px 0;border-top:1px solid var(--line)}
+.pg dl>div:first-child{border-top:0}
+.pg dt{font-size:14.5px;color:var(--body)}
+.pg dd{margin:0;font:800 15px/1 "Manrope",sans-serif;color:var(--pg-accent);white-space:nowrap}
+
+.cta{background:var(--accent);color:#fff}
+.cta::before{border-color:rgba(255,255,255,.28)}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{color:#fff}
+.cta p{color:#cfe0f5;margin-top:8px}
+.cta .btn-primary{background:#fff;color:var(--accent-ink);box-shadow:none}
+.cta .btn-primary:hover{background:#eef3fb}
+.cta .btn-ghost{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
+.cta .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12);color:#fff}
+
+.footer{background:#202936;padding:42px 0}
+.footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer .brand-wordmark,.footer .brand-wordmark small,.footer .brand-wordmark strong{color:#fff}
+.footer p{font-size:12px;color:#aeb7c3;max-width:46ch}
+.footer-links{display:flex;gap:20px;font:600 13px/1 "Manrope",sans-serif;color:#dbe1e8}
+.footer-links a:hover{color:#fff}
+
+@media(max-width:900px){.price-groups{columns:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.scrollprog{display:none}}
+</style>
+<style>
+/* Shared responsive layout and navigation. */
+.section{overflow-x:clip}
+.menu-toggle{display:none}
+.menu-toggle:focus-visible,.nav a:focus-visible{outline:3px solid #165db4;outline-offset:4px}
+@media(max-width:1150px){
+  .header .wrap{gap:10px}
+  .header .nav{display:none}
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:0;border:1px solid #165db4;border-radius:12px;background:#fff;color:#165db4;font:700 12px/1 "Manrope",sans-serif;cursor:pointer;margin-left:auto}
+  .header .header-call{font-size:0;padding:12px!important;flex:none}
+  .header .header-call svg{width:18px!important;height:18px!important;margin:0}
+  .header .nav.mobile-open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:12px var(--pad) 20px;background:#fff;border-bottom:1px solid #e4e8ee;box-shadow:0 16px 24px #20293612;max-height:calc(100dvh - 80px);overflow-y:auto}
+  .header .nav.mobile-open a{display:block;padding:14px 0;font-size:16px;line-height:1.3}
+}
+@media(max-width:720px){
+  .hero{display:block;padding-bottom:36px}
+  .hero .wrap{min-width:0}
+  .hero-features{position:relative;left:auto;right:auto;bottom:auto;transform:none;width:calc(100% - 2 * var(--pad));max-width:none;margin:30px var(--pad) 0;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-feature{min-width:0;max-width:none;gap:8px;padding:8px;font-size:11px}
+  .hero-feature .feature-diamond{flex-shrink:0}
+  .hero-feature>span{overflow-wrap:anywhere}
+  .promo-note{flex-direction:column;align-items:stretch}
+  .promo-note span{flex:auto;min-width:0}
+  .promo-note .btn{align-self:flex-start;margin-left:0;white-space:normal;line-height:1.4}
+  .section::before{display:none}
+  .pstory-nav{flex-wrap:wrap;gap:10px}
+  .pstory-dots{flex-wrap:wrap;max-width:100%}
+  .news-item.featured .news-feature-info{padding-bottom:24px}
+  .news-item summary>.kind{grid-column:2}
+  .reviews-more .btn,.video-copy>.btn{white-space:normal;line-height:1.4;max-width:100%}
+  .price-groups{columns:1}
+  .pg{min-width:0;padding-inline:20px}
+  .pg dl>div{gap:12px}
+  .pg dt{min-width:0;overflow-wrap:anywhere}
+  .pg dd{flex-shrink:0}
+  .phero-in,.cta .wrap>div{min-width:0;max-width:100%}
+  .phero h1{overflow-wrap:anywhere}
+  .footer-links{flex-wrap:wrap}
+}
+@media(max-width:680px){
+  .svc{padding-top:64px;padding-bottom:18px}
+  .svc .card{flex:0 0 min(300px,calc(100vw - 2 * var(--pad)));max-width:300px}
+  .card .ico{width:180px;height:180px;margin-bottom:62px}
+}
+</style>
+<script src="mobile-nav.js" defer></script>
+<script src="scroll-progress.js" defer></script>
+</head>
+<body>
+
+<div class="scrollprog" id="scrollprog"></div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-mark" src="public/brand-mark.png" alt=""><span class="brand-wordmark"><small>стоматология</small><strong>Миро-Дент</strong><span class="header-city">Знаменский</span></span></a>
+    <nav class="nav">
+      <a href="index.html#services">Услуги</a>
+      <a href="index.html#team">Врачи</a>
+      <a href="index.html#akcii">Акции</a>
+      <a href="prices.html" class="active">Цены</a>
+      <a href="index.html#reviews">Отзывы</a>
+      <a href="index.html#faq">Вопросы</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a class="btn btn-primary header-call" href="tel:+79885590303">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+      +7 988 559-03-03
+    </a>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap"><div class="phero-in">
+    <span class="eyebrow">Знаменский · Природная, 10Б к6</span>
+    <h1>Услуги и цены</h1>
+    <p style="margin-top:16px;max-width:56ch">Консультация бесплатная. Цены обновлены 6 октября 2026 года. Есть противопоказания, посоветуйтесь с врачом.</p>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Цены</h2>
+    <div class="price-groups">
+      <article class="pg">
+        <h3>Терапия и пломбирование</h3>
+        <dl>
+          <div><dt>Анестезия инфильтрационная, проводниковая</dt><dd>600 ₽</dd></div>
+          <div><dt>Аппликационная анестезия</dt><dd>300 ₽</dd></div>
+          <div><dt>Цементная пломба</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Композит двойного отверждения</dt><dd>1 500 ₽</dd></div>
+          <div><dt>Фотополимерная пломба CHARISMA, Spectrum (жевательные зубы)</dt><dd>2 500 ₽</dd></div>
+          <div><dt>Фотополимерная пломба ESTELITE, GRADIA (жевательные зубы)</dt><dd>от 3 500 ₽</dd></div>
+          <div><dt>Реставрация фронтального зуба CHARISMA, Spectrum</dt><dd>3 500 ₽</dd></div>
+          <div><dt>Реставрация ESTELITE, GRADIA</dt><dd>от 4 000 ₽</dd></div>
+          <div><dt>Реставрация культи зуба под коронку</dt><dd>2 500 ₽</dd></div>
+          <div><dt>Наложение лечебной / изолирующей прокладки</dt><dd>500 ₽</dd></div>
+          <div><dt>Временная пломба</dt><dd>500 ₽</dd></div>
+          <div><dt>Коррекция пломбы</dt><dd>500 ₽</dd></div>
+          <div><dt>Установка анкерного штифта</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Установка стекловолоконного штифта</dt><dd>1 200 ₽</dd></div>
+          <div><dt>Наложение коффердама</dt><dd>500 ₽</dd></div>
+          <div><dt>Рентгенография точечная</dt><dd>300 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Лечение каналов</h3>
+        <dl>
+          <div><dt>Оказание неотложной помощи при пульпите / периодонтите</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Депульпирование 1 корневого канала</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Пломбирование 1 канала с гуттаперчевым штифтом</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Пломбирование 1 канала ADSEAL</dt><dd>1 500 ₽</dd></div>
+          <div><dt>Пломбирование канала препаратами кальция / Пульпосептин</dt><dd>500 ₽</dd></div>
+          <div><dt>Распломбирование 1 корневого канала</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Распломбирование после резорцин-формалинового метода</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Удаление штифта из 1 корневого канала</dt><dd>от 2 000 ₽</dd></div>
+          <div><dt>Наложение девитализирующего препарата</dt><dd>500 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Гигиена и пародонтология</h3>
+        <dl>
+          <div><dt>Чистка всех зубов: Air Flow, шлифовка, полировка</dt><dd>6 000 ₽</dd></div>
+          <div><dt>Удаление наддесневых отложений ультразвуком</dt><dd>от 4 500 ₽</dd></div>
+          <div><dt>Удаление отложений в области 1 зуба</dt><dd>300 ₽</dd></div>
+          <div><dt>Флюоризация твёрдых тканей, курс 3 раза</dt><dd>1 200 ₽</dd></div>
+          <div><dt>Плазмолифтинг дёсен</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Местное лечение пародонта, 1 сеанс</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Промывание зубодесневого кармана</dt><dd>500 ₽</dd></div>
+          <div><dt>Шинирование 3 зубов стекловолокном</dt><dd>3 000 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Хирургия</h3>
+        <dl>
+          <div><dt>Удаление зуба простое</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Удаление постоянного зуба сложное</dt><dd>4 000 ₽</dd></div>
+          <div><dt>Удаление подвижного зуба</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Удаление осколка зуба</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Удаление зуба мудрости, верхняя челюсть</dt><dd>3 500 ₽</dd></div>
+          <div><dt>Удаление зуба мудрости, нижняя челюсть</dt><dd>4 500 ₽</dd></div>
+          <div><dt>Ретенция зуба мудрости</dt><dd>от 5 000 ₽</dd></div>
+          <div><dt>Резекция верхушки корня</dt><dd>от 10 000 ₽</dd></div>
+          <div><dt>Иссечение капюшона при перикороните</dt><dd>от 2 000 ₽</dd></div>
+          <div><dt>Удаление ретенционной кисты</dt><dd>5 000 ₽</dd></div>
+          <div><dt>Удаление экзостоза</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Вскрытие подслизистого абсцесса</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Пластика перфорации гайморовой пазухи</dt><dd>3 500 ₽</dd></div>
+          <div><dt>Лечение альвеолита</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Наложение шва</dt><dd>500 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Ортопедия и протезирование</h3>
+        <dl>
+          <div><dt>Коронка металлокерамическая</dt><dd>12 000 ₽</dd></div>
+          <div><dt>Коронка из диоксида циркония</dt><dd>от 12 000 ₽</dd></div>
+          <div><dt>Коронка на имплантат</dt><dd>20 000 ₽</dd></div>
+          <div><dt>Винир керамический (прессованная керамика)</dt><dd>15 000 ₽</dd></div>
+          <div><dt>Коронка временная</dt><dd>1 300 ₽</dd></div>
+          <div><dt>Коронка из пластмассы</dt><dd>4 000 ₽</dd></div>
+          <div><dt>Коронка литая / с напылением</dt><dd>4 500 / 5 000 ₽</dd></div>
+          <div><dt>Коронка из металлопластмассы</dt><dd>6 000 ₽</dd></div>
+          <div><dt>Культевая вкладка, 1 канал / многокорневой зуб</dt><dd>3 500 / 4 000 ₽</dd></div>
+          <div><dt>Съёмный пластинчатый протез</dt><dd>20 000 ₽</dd></div>
+          <div><dt>Съёмный нейлоновый протез (термоакрил)</dt><dd>40 000 ₽</dd></div>
+          <div><dt>Бюгельный протез</dt><dd>50 000 ₽</dd></div>
+          <div><dt>Ацеталовый протез</dt><dd>50 000 ₽</dd></div>
+          <div><dt>Иммедиат-протез (микропротез)</dt><dd>от 10 000 ₽</dd></div>
+          <div><dt>Починка съёмного протеза</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Перебазировка протеза</dt><dd>5 000 ₽</dd></div>
+          <div><dt>Снятие коронки</dt><dd>от 500 ₽</dd></div>
+          <div><dt>Фиксация коронки</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Снятие оттиска из силиконовой массы</dt><dd>от 500 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg">
+        <h3>Ортодонтия</h3>
+        <dl>
+          <div><dt>Лигатурная брекет-система</dt><dd>35 000 ₽</dd></div>
+          <div><dt>Самолигирующая брекет-система</dt><dd>50 000 ₽</dd></div>
+          <div><dt>Комбинированные брекеты</dt><dd>55 000 ₽</dd></div>
+          <div><dt>Комбинированные керамические брекеты</dt><dd>50 000 ₽</dd></div>
+          <div><dt>Частичная брекет-система</dt><dd>22 000 ₽</dd></div>
+          <div><dt>Элайнеры до 5 штук</dt><dd>75 000 ₽</dd></div>
+          <div><dt>Элайнеры от 11 до 20 штук</dt><dd>350 000 ₽</dd></div>
+          <div><dt>Пластина детская</dt><dd>18 000 ₽</dd></div>
+          <div><dt>Аппарат Марко-Росса (6–9 лет)</dt><dd>25 000 ₽</dd></div>
+          <div><dt>Несъёмный ортодонтический аппарат</dt><dd>25 000 ₽</dd></div>
+          <div><dt>Съёмный аппарат на две челюсти</dt><dd>30 000 ₽</dd></div>
+          <div><dt>Лечение съёмным аппаратом по типу каппы</dt><dd>14 000 ₽</dd></div>
+          <div><dt>Ретенционная каппа</dt><dd>10 000 ₽</dd></div>
+          <div><dt>Несъёмный ретейнер</dt><dd>9 000 ₽</dd></div>
+          <div><dt>Ортодонтический микровинт</dt><dd>10 000 ₽</dd></div>
+          <div><dt>Держатель места</dt><dd>10 000 ₽</dd></div>
+          <div><dt>Вестибулярная пластика</dt><dd>15 000 ₽</dd></div>
+          <div><dt>Коррекция ортодонтического лечения</dt><dd>2 500 ₽</dd></div>
+          <div><dt>Снятие брекет-системы</dt><dd>6 500 ₽</dd></div>
+        </dl>
+      </article>
+      <article class="pg" id="children">
+        <h3>Детская стоматология</h3>
+        <dl>
+          <div><dt>Адаптационный приём</dt><dd>500 ₽</dd></div>
+          <div><dt>Осмотр с выдачей справки</dt><dd>500 ₽</dd></div>
+          <div><dt>Герметизация фиссур</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Покрытие фторсодержащими препаратами</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Лечение кариеса молочного зуба (Кетак-Моляр)</dt><dd>3 000 ₽</dd></div>
+          <div><dt>Реставрация CHARISMA, Spectrum</dt><dd>2 500 ₽</dd></div>
+          <div><dt>Реставрация ESTELITE, GRADIA</dt><dd>3 500 ₽</dd></div>
+          <div><dt>Лечение пульпита / периодонтита молочного зуба</dt><dd>6 000 ₽</dd></div>
+          <div><dt>Гигиена молочных зубов</dt><dd>2 500 ₽</dd></div>
+          <div><dt>Гигиена постоянных зубов</dt><dd>3 500 ₽</dd></div>
+          <div><dt>Удаление молочного зуба простое</dt><dd>1 000 ₽</dd></div>
+          <div><dt>Удаление молочного зуба сложное</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Коррекция уздечки языка</dt><dd>2 000 ₽</dd></div>
+          <div><dt>Анестезия</dt><dd>600 ₽</dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <div>
+      <h2>Запланируем ваш визит</h2>
+      <p>Краснодар, посёлок Знаменский, Природная ул., 10Б, корп. 6</p>
+    </div>
+    <div class="phero-cta">
+      <a class="btn btn-primary" href="tel:+79885590303">Позвонить</a>
+      <a class="btn btn-ghost" href="https://yandex.ru/maps/org/miro_dent/179695455327" target="_blank" rel="noopener">Маршрут</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-mark" src="public/brand-mark.png" alt=""><span class="brand-wordmark"><small>стоматология</small><strong>Миро-Дент</strong></span></a>
+    <p>Информация не является публичной офертой. Имеются противопоказания — необходима консультация специалиста.</p>
+    <div class="footer-links">
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327/gallery/" target="_blank" rel="noopener">Фотографии</a>
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">Отзывы</a>
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327" target="_blank" rel="noopener">Яндекс Карты</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+
+  var header=document.getElementById('header');
+  var sentinel=document.createElement('div');
+  sentinel.style.cssText='position:absolute;top:0;height:36px;width:1px';
+  document.body.prepend(sentinel);
+  new IntersectionObserver(function(e){header.classList.toggle('compact',!e[0].isIntersecting);}).observe(sentinel);
+})();
+</script>
+</body>
+</html>

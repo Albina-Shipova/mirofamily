@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>«Миро-Дент» — стоматология в Краснодаре</title>
+<meta name="description" content="Стоматология «Миро-Дент» в посёлке Знаменский, Краснодар: лечение зубов взрослым и детям, хирургия, протезирование, брекеты и элайнеры. Бесплатная консультация.">
+<meta property="og:title" content="«Миро-Дент» — стоматология в Краснодаре">
+<meta property="og:description" content="Взрослая и детская стоматология в посёлке Знаменский, Природная ул., 10Б, корп. 6.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="public/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Миро-Дент — стоматология для взрослых и детей">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="public/og-image.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32.png">
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&family=Golos+Text:wght@400;500;600&family=Marck+Script&family=Lobster&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf8f3;
+  --bg-soft:#eef1e7;
+  --card:#ffffff;
+  --ink:#243328;
+  --body:#55645a;
+  --muted:#8a9589;
+  --accent:#3f7d6b;
+  --accent-ink:#2f5d50;
+  --accent-soft:#e3ede7;
+  --line:#e1e3d6;
+  --star:#d9a441;
+  --shadow:0 12px 34px rgba(40,60,45,.10);
+  --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --r:18px;
+  --r-sm:12px;
+  --pad:clamp(20px,6vw,96px);
+  --sp:clamp(74px,9vw,130px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--body);
+  font:400 17px/1.65 "Golos Text",Arial,Helvetica,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.025;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;color:var(--ink);letter-spacing:-.005em;margin:0}
+h2{font-size:clamp(28px,4.2vw,46px);line-height:1.08}
+h3{font-size:21px;font-weight:600;letter-spacing:0}
+p{margin:0}
+::selection{background:var(--accent);color:#fff}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:#cdd6c5;border-radius:10px}
+
+/* ---------- helpers ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+.section{padding:var(--sp) 0}
+.eyebrow{
+  display:inline-block;padding:8px 16px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent-ink);
+  font:700 11.5px/1 "Manrope",sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:22px;
+}
+.lead{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--body);max-width:58ch}
+/* scroll-reveal: keyframe-driven so it never fights element hover transitions */
+.js .reveal{opacity:0}
+.js .reveal.in{opacity:1;animation:rvl-up .8s cubic-bezier(.16,1,.3,1) backwards}
+.js .reveal.rl.in{animation-name:rvl-left}
+.js .reveal.rr.in{animation-name:rvl-right}
+.js .reveal.d1.in{animation-delay:.09s}
+.js .reveal.d2.in{animation-delay:.18s}
+.js .reveal.d3.in{animation-delay:.27s}
+.js .reveal.d4.in{animation-delay:.36s}
+.js .reveal.d5.in{animation-delay:.45s}
+@keyframes rvl-up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes rvl-left{from{opacity:0;transform:translateX(-72px)}to{opacity:1;transform:none}}
+@keyframes rvl-right{from{opacity:0;transform:translateX(72px)}to{opacity:1;transform:none}}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:15px 24px;border-radius:999px;
+  font:700 14px/1 "Manrope",sans-serif;
+  white-space:nowrap;transition:transform .15s ease,background .2s ease,border-color .2s ease,color .2s ease;
+}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 22px rgba(30,70,55,.25)}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-ghost:active{transform:translateY(1px)}
+
+.arrowlink{
+  display:inline-flex;align-items:center;gap:8px;
+  font:700 14px/1 "Manrope",sans-serif;color:var(--accent);
+}
+.arrowlink svg{width:15px;height:15px;transition:transform .2s ease}
+.arrowlink:hover svg{transform:translate(3px,-3px)}
+
+/* ---------- preloader ---------- */
+.preloader{
+  position:fixed;inset:0;z-index:120;background:#fff;
+  display:grid;place-content:center;justify-items:center;gap:18px;
+  animation:plfail .35s ease 2s forwards;
+}
+html:not(.js) .preloader{display:none}
+.preloader.done{opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}
+.pl-logo{display:flex;align-items:center;gap:12px}
+.pl-logo img{width:44px;height:44px}
+.pl-logo .brand-mark{width:70px;height:78px}
+.pl-logo b{font:800 28px/1 "Manrope",sans-serif;color:var(--ink);letter-spacing:-.02em}
+.pl-logo b span{display:block;font:600 8px/1 "Manrope",sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.pl-track{width:min(230px,58vw);height:3px;border-radius:3px;background:var(--line);overflow:hidden}
+.pl-track i{display:block;height:100%;width:8%;border-radius:3px;background:var(--accent);animation:plload .5s cubic-bezier(.3,.7,.2,1) forwards}
+.pl-pct{font:700 11px/1 "Manrope",sans-serif;color:var(--muted);letter-spacing:.1em}
+@keyframes plload{to{width:100%}}
+@keyframes plfail{to{opacity:0;visibility:hidden}}
+
+/* ---------- scroll progress ---------- */
+.scrollprog{
+  position:fixed;top:0;left:0;height:3px;width:100%;z-index:80;
+  background:var(--accent);transform:scaleX(0);transform-origin:0 50%;
+  will-change:transform;transition:transform .08s linear;
+}
+
+/* ---------- header ---------- */
+.header{
+  position:fixed;z-index:60;inset:3px 0 auto 0;
+  height:78px;display:flex;align-items:center;
+  background:rgba(16,28,22,.34);backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:height .28s ease,background .28s ease,border-color .28s ease,box-shadow .28s ease;
+}
+.header.compact{background:#fff;border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(40,60,45,.10)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:24px}
+.brand{display:flex;align-items:center;gap:8px;font:800 21px/1 "Manrope",sans-serif;color:#fff;transition:color .28s ease}
+.header.compact .brand{color:var(--ink)}
+.brand-ico{width:26px;height:26px;flex:none}
+.brand-text{display:flex;align-items:baseline;gap:9px}
+.brand span{font:600 9px/1 "Manrope",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#c3d2c7;transition:color .28s ease}
+.header .brand{font-size:25px}
+.header .brand-ico{width:30px;height:30px}
+.header .brand span{font-size:10.5px}
+.header.compact .brand span{color:var(--muted)}
+.nav{display:flex;gap:30px}
+.nav a{font:500 14px/1 "Golos Text",sans-serif;color:#d3e0d6;position:relative;padding:6px 0;transition:color .28s ease}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--accent);border-radius:2px;transition:right .25s ease}
+.nav a:hover{color:#fff}
+.nav a:hover::after{right:0}
+.nav a.active{color:#a7d3bd;font-weight:600}
+.nav a.active::after{right:0}
+.header.compact .nav a{color:var(--body)}
+.header.compact .nav a:hover{color:var(--ink)}
+.header.compact .nav a.active{color:var(--accent-ink)}
+.header .btn-primary{padding:12px 20px}
+.header-call svg{width:15px;height:15px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  min-height:clamp(600px,86vh,800px);
+  display:flex;align-items:center;
+  padding:calc(78px + clamp(30px,5vw,54px)) 0 clamp(64px,9vw,96px);
+  background-color:#12241d;
+  background-image:
+    linear-gradient(to left,rgba(18,36,29,.5) 0%,rgba(18,36,29,0) 3%),
+    linear-gradient(100deg,#12241d 0%,rgba(18,36,29,.75) 30%,rgba(18,36,29,0) 55%),
+    url("public/miro/miro-cabinet-1.webp");
+  background-repeat:no-repeat;
+  background-position:0 0,0 0,right center;
+  background-size:100% 100%,100% 100%,auto 116%;
+}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero-inner{max-width:540px}
+.js .hero-inner>*{opacity:0;transform:translateY(18px)}
+.js .hero.ready .hero-inner>*{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1)}
+.js .hero.ready .hero-inner>:nth-child(1){transition-delay:.05s}
+.js .hero.ready .hero-inner>:nth-child(2){transition-delay:.18s}
+.js .hero.ready .hero-inner>:nth-child(3){transition-delay:.31s}
+.js .hero.ready .hero-inner>:nth-child(4){transition-delay:.44s}
+.js .hero.ready .hero-inner>:nth-child(5){transition-delay:.57s}
+.hero .eyebrow{background:rgba(255,255,255,.14);color:#dcece3;backdrop-filter:blur(6px)}
+.hero h1{font-size:clamp(37px,5.1vw,64px);line-height:1.05;margin:0 0 20px;color:#fff}
+.hero h1 .hl{color:#9ccdb3;font-style:italic}
+.hero p{font-size:clamp(16px,1.5vw,20px);line-height:1.6;color:#c3d2c7;max-width:44ch}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero .btn-ghost{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.32);color:#fff}
+.hero .btn-ghost:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.14)}
+
+.hero-scroll{
+  position:absolute;left:50%;bottom:clamp(38px,6vw,64px);transform:translateX(-50%);z-index:3;
+  width:78px;height:78px;border-radius:50%;border:0;cursor:pointer;
+  background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;
+}
+.hero-scroll::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--accent);animation:hspulse 2.6s ease-out infinite}
+.hs-ring{position:absolute;inset:0;width:100%;height:100%;fill:var(--accent-ink);animation:hsspin 16s linear infinite}
+.hs-ring text{font:700 8px/1 "Manrope",sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.hs-arr{position:relative;width:18px;height:18px;color:var(--accent);animation:hsbob 1.9s ease-in-out infinite}
+@keyframes hspulse{0%{transform:scale(1);opacity:.5}70%,100%{transform:scale(1.55);opacity:0}}
+@keyframes hsspin{to{transform:rotate(360deg)}}
+@keyframes hsbob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+
+/* ---------- bright geometric hero ---------- */
+.header{background:rgba(255,255,255,.95);border-bottom:1px solid #edf0f5;box-shadow:none}
+.header.compact{background:rgba(255,255,255,.98);border-bottom-color:#e5e9f0;box-shadow:0 6px 24px rgba(18,35,58,.07)}
+.header .wrap{max-width:1440px}.brand{color:#202936}
+.brand-mark{width:66px;height:70px;object-fit:contain;flex:none}
+.brand-wordmark{display:flex;flex-direction:column;align-items:flex-start;color:#202936;line-height:.78}
+.brand-wordmark small{font:700 15px/1 "Manrope",sans-serif;letter-spacing:.01em}
+.brand-wordmark strong{font:400 38px/1 "Marck Script",cursive;letter-spacing:-.03em}
+.brand-wordmark em{margin-top:5px;font:800 7px/1 "Manrope",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#165db4;font-style:normal}
+.header .brand-wordmark small,.header .brand-wordmark strong{color:#202936}
+.header .brand-wordmark em{display:none}
+.header .brand-wordmark{text-transform:none;letter-spacing:normal;flex:none}
+.header .brand .header-city{display:block;margin-top:5px;font:500 10px/1.2 "Manrope",sans-serif;letter-spacing:.02em;text-transform:none;color:#68717c}
+.footer .brand-wordmark{color:#fff}.footer .brand-wordmark em{color:#a7d3bd}
+.header .nav a,.header.compact .nav a{color:#202936}.header .nav a:hover,.header.compact .nav a:hover{color:#0b56ae}.header .nav a::after{background:#0b56ae}
+.header .btn-primary{background:#fff;color:#0b56ae;border:1.5px solid #0b56ae;box-shadow:none}.header .btn-primary:hover{background:#0b56ae;color:#fff}
+.hero{min-height:790px;padding:150px 0 88px;background:#fff;color:#202936;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 46%,rgba(30,94,170,.06),transparent 34%);pointer-events:none}
+.hero .wrap{max-width:1440px;display:grid;grid-template-columns:minmax(430px,.82fr) minmax(560px,1.18fr);align-items:center;gap:20px}
+.hero-inner{max-width:610px;padding-bottom:105px}.hero .eyebrow{background:none;color:#68707b;padding:0;border-radius:0;font:600 14px/1.4 "Manrope",sans-serif;letter-spacing:0;text-transform:none;margin-bottom:16px}
+.hero-badge{display:inline-flex;align-items:center;gap:11px;margin:0 0 24px;padding:8px 16px 8px 9px;border-radius:999px;background:#fff;border:1px solid #e4e8ee;box-shadow:0 12px 28px rgba(22,40,63,.1);font:600 13px/1.35 "Manrope",sans-serif;color:#202936}
+.hero-badge .yb-pin{width:26px;height:26px;flex:none;display:grid;place-items:center;border-radius:8px;background:#fc3f1d}
+.hero-badge .yb-pin svg{width:15px;height:15px;display:block}
+.hero-badge b{font-weight:800}
+.hero-badge i{font-style:normal;color:#8a94a2}
+@media(max-width:720px){.hero-badge{font-size:12px;gap:9px}.hero-badge i{display:none}}
+.hero h1{font-family:"Manrope",sans-serif;font-size:clamp(43px,4.5vw,68px);line-height:1.12;font-weight:800;letter-spacing:-.035em;color:#202936;margin-bottom:24px}
+.hero h1::after{content:"";display:block;width:190px;height:4px;margin-top:30px;background:linear-gradient(90deg,#ef3028 0 25%,#165db4 25% 50%,#26904c 50% 75%,#f4c20d 75%);border-radius:4px}
+.hero p{font-size:clamp(17px,1.45vw,21px);line-height:1.55;color:#656b74;max-width:48ch}.hero-cta{margin-top:34px}
+.hero .btn-primary{background:#0b56ae;box-shadow:0 10px 26px rgba(11,86,174,.2)}.hero .btn-primary:hover{background:#08458d}
+.hero .btn-ghost{background:#fff;border-color:#0b56ae;color:#0b56ae}.hero .btn-ghost:hover{background:#f4f8fd;border-color:#08458d;color:#08458d}
+.hero-visual{position:relative;z-index:1;margin-right:-7vw;filter:drop-shadow(0 25px 28px rgba(29,45,68,.15))}.hero-visual img{width:100%;max-height:670px;object-fit:contain}
+.hero-features{position:absolute;z-index:4;left:50%;bottom:42px;transform:translateX(-50%);width:min(880px,calc(100% - 2 * var(--pad)));display:flex;justify-content:center;align-items:stretch;background:rgba(255,255,255,.97);border:1px solid #edf0f5;border-radius:14px;box-shadow:0 14px 40px rgba(25,45,70,.08);padding:15px 8px}
+.hero-feature{display:flex;align-items:center;gap:11px;padding:4px 18px;border-right:1px solid #e3e7ed;font:600 12px/1.45 "Manrope",sans-serif;color:#27303c;max-width:190px}.hero-feature:last-child{border-right:0}
+.feature-diamond{width:40px;height:40px;display:grid;place-items:center;flex:none;border:1.5px solid currentColor;border-radius:7px;transform:rotate(45deg)}
+.feature-diamond svg{width:24px;height:24px;padding:0;border:0;border-radius:0;transform:rotate(-45deg);overflow:visible}
+.feature-diamond svg>*{transform:none}.hero-feature>span{color:#27303c}
+.hero-feature:nth-child(1){color:#e7332a}.hero-feature:nth-child(2){color:#165db4}.hero-feature:nth-child(3){color:#28914c}.hero-feature:nth-child(4){color:#b98d00}
+.hero-scroll{left:auto;right:var(--pad);bottom:35px;width:52px;height:52px;box-shadow:none;border:1px solid #dfe4ea}.hero-scroll::after,.hero-scroll .hs-ring{display:none}.hero-scroll .hs-arr{color:#202936}
+@media(max-width:1050px){.brand-logo{width:210px;height:62px}.header .nav{display:none}.hero{padding-top:125px;min-height:auto}.hero .wrap{grid-template-columns:1fr 1fr}.hero-inner{padding-bottom:150px}.hero-visual{margin-right:-18vw}.hero-features{right:auto;flex-wrap:wrap;max-width:660px}.hero-feature{flex:1 1 145px}.hero-feature:nth-child(2){border-right:0}}
+@media(max-width:720px){.header{height:70px}.header .wrap{gap:10px}.brand-logo{width:165px;height:54px}.header-call{font-size:0;padding:12px!important}.header-call svg{margin:0;width:18px!important;height:18px!important}.hero{padding:105px 0 36px}.hero .wrap{display:flex;flex-direction:column;gap:0}.hero-inner{padding:0;max-width:none}.hero h1{font-size:clamp(38px,11vw,52px)}.hero h1::after{margin-top:22px}.hero-visual{order:-1;margin:0 -18vw -5vw 12vw}.hero-visual img{max-height:390px}.hero-features{position:relative;left:auto;right:auto;bottom:auto;transform:none;width:auto;margin:30px var(--pad) 0;display:grid;grid-template-columns:1fr 1fr}.hero-feature{padding:8px 10px;border-bottom:1px solid #e3e7ed}.hero-feature:nth-child(2){border-right:0}.hero-feature:nth-child(3),.hero-feature:nth-child(4){border-bottom:0}.hero-scroll{display:none}}
+
+@media(max-width:1050px){.brand-mark{width:54px;height:58px}.brand-wordmark small{font-size:12px}.brand-wordmark strong{font-size:30px}.brand-wordmark em{display:none}}
+@media(max-width:720px){.brand-mark{width:44px;height:48px}.brand-wordmark small{font-size:10px}.brand-wordmark strong{font-size:25px}}
+
+/* ---------- metrics card ---------- */
+.metrics{padding:0}
+.metrics .wrap{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);
+  display:grid;grid-template-columns:repeat(4,1fr);
+  padding:0;margin-top:calc(-1 * clamp(36px,4.5vw,56px));position:relative;z-index:3;
+}
+.metric{padding:30px 28px;border-right:1px solid var(--line)}
+.metric:last-child{border-right:0}
+.metric b{display:block;font:800 clamp(26px,3vw,38px)/1 "Manrope",sans-serif;color:var(--ink)}
+.metric span{display:block;margin-top:8px;font-size:13px;color:var(--muted)}
+
+/* ---------- about ---------- */
+.about{background:var(--bg)}
+.about .wrap{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(32px,6vw,78px);align-items:center}
+.about-photo{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.about-photo img{width:100%;height:100%;min-height:460px;object-fit:cover;object-position:center 25%}
+.photo-graded{position:relative}
+.photo-graded img{filter:saturate(.92) contrast(1.04) brightness(.98)}
+.photo-graded::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(28,60,45,.18),transparent 55%);pointer-events:none}
+.about h2{margin-bottom:20px}
+.facts{display:flex;flex-direction:column;margin-top:32px;border-top:1px solid var(--line)}
+.fact{display:flex;align-items:baseline;gap:22px;padding:18px 4px;border-bottom:1px solid var(--line);font:600 15px "Golos Text",sans-serif;color:var(--ink);transition:gap .25s ease}
+.fact:hover{gap:28px}
+.fact b{font:800 30px/1 "Manrope",sans-serif;color:var(--accent-soft);letter-spacing:-.02em;flex:none;transition:color .25s ease}
+.fact:hover b{color:var(--accent)}
+.note{margin-top:18px;font-size:12.5px;line-height:1.6;color:var(--muted);max-width:52ch}
+
+/* ---------- services ---------- */
+.metrics{display:none}
+.services{background:#fff;overflow:hidden;position:relative}
+.services::before,.services::after{content:"";position:absolute;width:110px;height:110px;border:2px solid #e9edf3;transform:rotate(45deg);border-radius:10px;pointer-events:none}
+.services::before{left:-72px;top:42%}.services::after{right:-72px;bottom:12%}
+.services-head{text-align:center;margin:0 auto 36px;max-width:760px}
+.services-head .eyebrow{background:none;padding:0;color:#165db4;margin-bottom:16px}
+.services-head h2{font-family:"Manrope",sans-serif;font-weight:800;letter-spacing:-.03em}
+.services-head p{margin:16px auto 0;max-width:650px;color:#68707b;font-size:17px}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:services}
+.card{--card-accent:#ef3028;position:relative;overflow:visible;background:#fff;border:1px solid #e5e8ed;border-radius:22px;padding:0 28px 28px;display:flex;flex-direction:column;box-shadow:0 15px 42px rgba(22,40,63,.07);min-height:480px;transition:transform .28s ease,box-shadow .28s ease}
+.card:nth-child(2){--card-accent:#ef3028;order:1}.card:nth-child(1){--card-accent:#165db4;order:2}.card:nth-child(4){--card-accent:#28914c;order:3}.card:nth-child(3){--card-accent:#f2b900;order:4}.card:nth-child(n+5){display:none}
+.card::after{display:none}.card::before{content:"";position:absolute;z-index:3;top:-21px;left:16px;width:58px;height:58px;display:grid;place-items:center;background:var(--card-accent);color:#fff;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);font:700 18px "Manrope",sans-serif}
+.card:nth-child(2)::before{content:"01"}.card:nth-child(1)::before{content:"02"}.card:nth-child(4)::before{content:"03"}.card:nth-child(3)::before{content:"04"}
+.card:hover{transform:translateY(-7px);box-shadow:0 24px 50px rgba(22,40,63,.12);border-color:#dfe4eb}
+.card .ico{width:200px;height:200px;flex-shrink:0;margin:-18px auto 64px;padding:0;border-radius:16px;transform:rotate(45deg);background-size:142%;background-position:center;overflow:hidden}
+.card .ico svg{display:none}.card:nth-child(1) .ico{background-image:url("public/service-treatment.png")}.card:nth-child(2) .ico{background-image:url("public/service-kids.png")}.card:nth-child(3) .ico{background-image:url("public/service-ortho.png")}.card:nth-child(4) .ico{background-image:url("public/service-implant.png")}
+.card h3{font-family:"Manrope",sans-serif;font-size:20px;font-weight:800;line-height:1.22;margin:0 0 17px;color:#202936}
+.card h3::after{content:"";display:block;width:26px;height:2px;background:var(--card-accent);margin-top:15px}
+.card p{font-size:14px;line-height:1.6;color:#68707b;flex:1}.card .arrowlink{margin-top:24px;color:var(--card-accent)}
+.trust-strip{margin-top:50px;display:grid;grid-template-columns:1.25fr repeat(3,1fr);background:#fff;border:1px solid #e5e8ed;border-radius:20px;box-shadow:0 14px 38px rgba(22,40,63,.06);padding:24px 26px}
+.trust-item{display:flex;align-items:center;gap:14px;padding:8px 24px;border-right:1px solid #e5e8ed;font:600 13px/1.45 "Manrope",sans-serif;color:#27303c}.trust-item:last-child{border-right:0}.trust-item:first-child{font-size:18px;font-weight:800}
+.trust-item svg{width:38px;height:38px;flex:none;color:#165db4}
+@media(max-width:1050px){.svc{grid-template-columns:repeat(2,1fr);gap:48px 24px}.card{min-height:450px}.trust-strip{grid-template-columns:1fr 1fr}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(-n+2){border-bottom:1px solid #e5e8ed}}
+@media(max-width:620px){.services-head{text-align:left;margin-bottom:30px}.svc{grid-template-columns:1fr;gap:50px}.card{max-width:390px;margin:auto;width:100%}.trust-strip{grid-template-columns:1fr}.trust-item{border-right:0!important;border-bottom:1px solid #e5e8ed;padding:16px 6px}.trust-item:last-child{border-bottom:0}.service-photo{width:185px}}
+
+/* ---------- dark accent sections (near-black + neon, echo the hero) ---------- */
+.band,.consult,.promo,.gallery{background:#1c352e;color:#eef3ec;position:relative;overflow:hidden}
+.consult::after,.promo::after,.gallery::after{
+  content:"";position:absolute;width:min(64vw,760px);aspect-ratio:1;z-index:0;pointer-events:none;
+  background:radial-gradient(circle,rgba(122,178,150,.3),rgba(122,178,150,.06) 52%,transparent 72%);
+}
+.consult::after{top:-30%;right:-8%}
+.promo::after{bottom:-38%;left:-8%}
+.gallery::after{top:-34%;left:50%;transform:translateX(-50%);opacity:.7}
+
+/* ---------- quote band ---------- */
+.band{text-align:center}
+.band::after{
+  content:"";position:absolute;top:-32%;left:50%;transform:translateX(-50%);
+  width:min(60vw,680px);aspect-ratio:1;z-index:0;pointer-events:none;
+  background:radial-gradient(circle,rgba(217,164,65,.2),transparent 68%);
+}
+.band .wrap{display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}
+.band::before{
+  content:"\201C";position:absolute;left:50%;top:14%;transform:translate(-50%,0);
+  font:800 clamp(140px,17vw,220px)/1 Georgia,"Times New Roman",serif;color:rgba(140,190,160,.12);
+  z-index:0;pointer-events:none;
+}
+.band-wave{position:absolute;top:0;left:0;width:100%;height:clamp(36px,6vw,72px);z-index:1;pointer-events:none}
+.band p.intro{max-width:46ch;color:#9aa89d;font-size:clamp(15px,1.4vw,17px);letter-spacing:.02em}
+.band blockquote{
+  margin:22px 0 18px;max-width:24ch;padding:0;border:0;
+  font:600 clamp(30px,4.6vw,58px)/1.16 var(--font-display);color:#fff;letter-spacing:-.005em;font-style:italic;
+}
+.band cite{font-style:normal;font-size:14px;color:#84928a;letter-spacing:.02em}
+.band .stars{justify-content:center;margin-bottom:0}
+.band .stars svg{width:19px;height:19px;color:var(--star)}
+
+/* ---------- consult (bg-free consultation) ---------- */
+.consult{text-align:center}
+.consult-wave{position:absolute;top:0;left:0;width:100%;height:clamp(36px,6vw,72px);z-index:1;pointer-events:none}
+.consult .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.consult h2{color:#fff}
+.consult h2 .hl{color:#a7d3bd;font-style:italic}
+.consult>.wrap>p{margin:16px 0 4px;max-width:54ch;color:#a7b3a8;font-size:clamp(15px,1.4vw,17px);line-height:1.6}
+.consult-list{list-style:none;padding:0;margin:28px 0 32px;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left;max-width:700px;width:100%}
+.consult-list li{display:flex;align-items:center;gap:12px;background:rgba(140,190,160,.08);border:1px solid rgba(140,190,160,.24);border-radius:12px;padding:15px 17px;font:600 15.5px/1.4 "Golos Text",Arial,sans-serif;color:#eef3ec;transition:border-color .28s ease,transform .28s cubic-bezier(.16,1,.3,1)}
+.consult-list li:hover{border-color:rgba(140,190,160,.58);transform:translateY(-4px)}
+.consult-list li svg{width:15px;height:15px;flex:none;color:#1c352e;background:#8fccae;border-radius:50%;padding:5px;box-sizing:content-box;box-shadow:0 0 14px rgba(140,190,160,.52)}
+.consult .btn-primary{background:#8fccae;color:#1c352e;box-shadow:0 0 0 1px rgba(140,190,160,.42),0 10px 30px rgba(30,70,55,.34)}
+.consult .btn-primary:hover{background:#a7dcc0}
+
+/* ---------- promo (акции) ---------- */
+.promo .wrap{position:relative;z-index:1}
+.promo .eyebrow{background:rgba(140,190,160,.15);color:#b6ddc7}
+.promo h2{color:#fff}
+.promo-head{max-width:52ch;margin-bottom:34px}
+.promo-head p{margin-top:12px;color:#a7b3a8;font-size:15.5px;line-height:1.6}
+.promo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.promo-card{background:#274a3f;color:#eef3ec;border:1px solid rgba(140,190,160,.24);border-radius:var(--r);padding:22px 20px;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s ease,box-shadow .3s ease}
+.promo-card:hover{transform:translateY(-6px);border-color:rgba(140,190,160,.52);box-shadow:0 0 34px rgba(30,70,55,.2)}
+.promo-card .tag{align-self:flex-start;margin-bottom:12px;padding:6px 12px;border-radius:999px;background:rgba(140,190,160,.15);border:1px solid rgba(140,190,160,.34);color:#b6ddc7;font:800 11.5px/1 "Manrope",sans-serif;letter-spacing:.05em;text-transform:uppercase}
+.promo-card .val{font:800 30px/1 "Manrope",sans-serif;color:#a7d3bd;letter-spacing:-.02em}
+.promo-card .val s{color:#78857b;font-size:16px;font-weight:600;margin-left:8px}
+.promo-card h3{font-size:16.5px;margin:7px 0 0;color:#fff}
+.promo-card>p{font-size:13.5px;line-height:1.55;color:#a7b3a8;margin-top:6px}
+.promo-note{margin-top:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:rgba(140,190,160,.07);border:1px solid rgba(140,190,160,.22);border-radius:var(--r);padding:16px 22px}
+.promo-note span{color:#b3bfb5;font-size:14.5px;line-height:1.5;flex:1;min-width:220px}
+.promo-note .btn-primary{background:#8fccae;color:#1c352e;box-shadow:0 0 0 1px rgba(140,190,160,.42),0 10px 26px rgba(30,70,55,.3);margin-left:auto}
+.promo-note .btn-primary:hover{background:#a7dcc0}
+
+/* ---------- gallery ---------- */
+.gallery .wrap{position:relative;z-index:1}
+.gallery h2{color:#fff}
+.gallery-head{margin-bottom:36px}
+.works-row{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(24px,4vw,40px)}
+.works-col{flex:1 1 340px;min-width:0;max-width:420px}
+.gallery-subtitle{color:#fff;margin:0 0 14px;text-align:center;font-size:22px}
+.wslider{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid rgba(140,190,160,.2);box-shadow:0 0 34px rgba(30,70,55,.13);aspect-ratio:4/5;max-height:560px;background:#274a3f;touch-action:pan-y;transition:border-color .3s ease,box-shadow .3s ease}
+.works-col:hover .wslider{border-color:rgba(140,190,160,.52);box-shadow:0 0 46px rgba(30,70,55,.23)}
+.wslider-track{display:flex;width:100%;height:100%;transition:transform .45s cubic-bezier(.16,1,.3,1);user-select:none;-webkit-user-select:none;cursor:grab}
+.wslide{flex:0 0 100%;width:100%;height:100%}
+.wslide button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.wslide img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.wslider-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  width:40px;height:40px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(12,24,18,.42);color:#fff;display:grid;place-items:center;
+  transition:background .2s ease,opacity .2s ease;
+}
+.wslider-arrow:hover{background:rgba(12,24,18,.66)}
+.wslider-arrow svg{width:18px;height:18px}
+.wslider-arrow.prev{left:14px}
+.wslider-arrow.next{right:14px}
+.wslider-dots{position:absolute;left:0;right:0;bottom:14px;z-index:2;display:flex;justify-content:center;gap:7px}
+.wslider-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;transition:background .2s ease,transform .2s ease}
+.wslider-dots button.active{background:#fff;transform:scale(1.3)}
+.works-cap{margin-top:14px;font-size:14.5px;color:#9aa89d}
+@media(max-width:700px){
+  .works-row{gap:28px}
+  .works-col{flex:0 1 100%;max-width:420px}
+}
+
+/* ---------- video ---------- */
+.video{background:var(--bg-soft)}
+.video .wrap{display:grid;grid-template-columns:1fr auto;gap:clamp(30px,6vw,72px);align-items:center}
+.video .eyebrow{background:#fff}
+.video-copy h2{margin-bottom:16px}
+.video-copy>p{max-width:38ch;color:var(--body)}
+.video-list{list-style:none;padding:0;margin:26px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.video-list li{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);background:#fff;font:600 13.5px/1.25 "Golos Text",sans-serif;color:var(--ink);transition:border-color .28s ease,transform .28s cubic-bezier(.16,1,.3,1)}
+.video-list li:hover{border-color:#c2d4c8;transform:translateY(-4px)}
+.video-list .ti{width:38px;height:38px;flex:none;border-radius:11px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;transition:background .25s ease,color .25s ease}
+.video-list li:hover .ti{background:var(--accent);color:#fff}
+.video-list .ti svg{width:19px;height:19px}
+.video-clip{position:relative;display:block;width:min(300px,74vw);aspect-ratio:9/16;max-height:500px;
+  border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#e7efe6;cursor:pointer;border:0;padding:0}
+.video-clip img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.video-clip:hover img{transform:scale(1.04)}
+.video-clip iframe{width:100%;height:100%;border:0;display:block}
+.video-clip .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(47,107,90,.42);transition:transform .2s ease}
+.video-clip:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+.video-clip .play svg{width:22px;height:22px;margin-left:3px}
+.video-clip.playing img,.video-clip.playing .play{display:none}
+.video-clip.playing::after{display:none}
+
+/* ---------- news ---------- */
+.news-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:20px}
+.news-featured{
+  background:var(--bg-soft);border-radius:var(--r);padding:clamp(28px,4vw,44px);margin-bottom:14px;
+  display:flex;flex-direction:column;align-items:flex-start;gap:14px;
+}
+.news-featured .kind{font:700 11.5px/1.4 "Manrope",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.news-featured h3{font-size:clamp(24px,2.6vw,32px)}
+.news-featured p{font-size:15.5px;color:var(--body);max-width:62ch}
+.news-list{display:flex;flex-direction:column}
+.news-row{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:20px 4px;border-top:1px solid var(--line);transition:transform .28s cubic-bezier(.16,1,.3,1);
+}
+.news-row:last-child{border-bottom:1px solid var(--line)}
+.news-row:hover{transform:translateX(8px)}
+.news-row-text{display:flex;align-items:baseline;gap:16px}
+.news-row .kind{font:700 11px/1.4 "Manrope",sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.news-row h3{font-size:17px}
+.news-row .arrowlink{white-space:nowrap}
+.news-head{align-items:flex-start;margin-bottom:36px}.news-title .eyebrow{margin-bottom:16px}.news-title h2{max-width:16ch;line-height:1.12}
+.news-list{gap:12px}.news-item{--news-accent:#165db4;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(22,40,63,.05)}
+.news-item:nth-child(2){--news-accent:#165db4}.news-item:nth-child(3){--news-accent:#28914c}.news-item:nth-child(4){--news-accent:#f2b900}.news-item:nth-child(5){--news-accent:#ef3028}
+.news-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:28px 145px 1fr auto;align-items:center;gap:22px;padding:23px 34px;color:var(--ink)}
+.news-item summary::-webkit-details-marker{display:none}.news-item summary::before{content:"";width:24px;height:24px;background:var(--news-accent);border-radius:4px;transform:rotate(45deg)}
+.news-item summary time{font:600 13px "Manrope",sans-serif;color:var(--muted);text-transform:uppercase}.news-item summary h3{font:700 18px/1.35 "Manrope",sans-serif;color:var(--ink)}
+.news-toggle{display:flex;align-items:center;gap:12px;font:700 14px "Manrope",sans-serif;color:#165db4}.news-toggle svg{width:22px;height:22px;transition:transform .25s ease}.news-item[open] .news-toggle svg{transform:rotate(180deg)}
+.news-body{padding:0 58px 34px 209px;color:#4f5965;font-size:15.5px;line-height:1.7;max-width:1040px}.news-body p{margin:0 0 15px}.news-body p:last-child{margin-bottom:0}.news-cta{font-weight:700;color:#165db4}
+.news-item.featured summary{position:relative;grid-template-columns:minmax(250px,440px) 1fr auto;padding:0;gap:48px}.news-item.featured summary::before{display:none}
+.news-feature-photo{height:330px;overflow:hidden;clip-path:polygon(20% 0,80% 0,100% 25%,100% 75%,80% 100%,20% 100%,0 75%,0 25%)}.news-feature-photo img{width:100%;height:100%;object-fit:cover}
+.news-feature-info{padding:32px 0}.news-feature-info time{display:block;margin-bottom:18px;color:#165db4}.news-feature-info h3{font-size:clamp(24px,2.5vw,34px);max-width:20ch}.news-item.featured .news-toggle{margin-right:34px}
+.news-item.featured .news-body{padding:34px clamp(28px,6vw,92px);max-width:1120px;border-top:1px solid var(--line)}
+@media(max-width:800px){.news-head{display:block}.news-title h2{max-width:none}.news-item summary{grid-template-columns:24px 1fr auto;gap:14px;padding:20px}.news-item summary time{grid-column:2}.news-item summary h3{grid-column:2}.news-toggle{grid-column:3;grid-row:1/3;font-size:0}.news-body{padding:0 24px 28px}.news-item.featured summary{grid-template-columns:1fr}.news-feature-photo{height:260px}.news-feature-info{padding:0 24px}.news-item.featured .news-toggle{position:absolute;right:8px;bottom:12px}}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--bg-soft)}
+.reviews-head{margin-bottom:36px}
+.review-summary{
+  display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);
+  padding:26px 28px;margin-bottom:36px;
+}
+.review-summary .rs-score{font:800 46px/1 "Manrope",sans-serif;color:var(--ink);letter-spacing:-.02em}
+.review-summary .rs-meta{display:flex;flex-direction:column;gap:6px}
+.review-summary .rs-meta .stars{margin:0}
+.review-summary .rs-meta span{font-size:13px;color:var(--muted)}
+.review-summary .rs-tags{margin-left:auto;font-size:14px;color:var(--body);max-width:38ch}
+.review-summary .rs-tags b{display:block;color:var(--ink);font:700 12.5px "Manrope",sans-serif;letter-spacing:.03em;text-transform:uppercase;margin-bottom:6px}
+.reviews-more{margin-top:32px}
+.review-grid{columns:2;column-gap:18px}
+.review{
+  break-inside:avoid;margin-bottom:18px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:26px;
+  transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s ease,border-color .3s ease;
+}
+.review:hover{transform:translateY(-6px);border-color:#c2d4c8;box-shadow:0 22px 50px rgba(40,60,45,.16)}
+.stars{display:flex;gap:3px;margin-bottom:14px}
+.stars svg{width:16px;height:16px;color:var(--star)}
+.review p{font-size:15.5px;line-height:1.55;color:#3c473f}
+.review footer{margin-top:18px;padding-top:15px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12.5px}
+.review footer b{font-family:"Manrope",sans-serif;color:var(--ink);font-weight:700}
+.review footer a{color:var(--muted)}
+.review footer a:hover{color:var(--accent)}
+
+/* ---------- patient stories ---------- */
+.pstories{background:var(--bg)}
+.pstories-head{margin-bottom:34px}
+.pstory-viewport{position:relative;transition:height .45s cubic-bezier(.16,1,.3,1)}
+.pstory{
+  position:absolute;top:0;left:0;width:100%;
+  opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease;
+  display:grid;grid-template-columns:.4fr .6fr;gap:clamp(24px,4vw,54px);align-items:stretch;
+}
+.pstory.active{opacity:1;visibility:visible}
+.pstory-photo{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);min-height:340px}
+.pstory-photo button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.pstory-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.pstory-body .kind{display:block;margin-bottom:12px;font:700 11.5px/1.4 "Manrope",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.pstory-body h3{font-size:clamp(21px,2.4vw,29px);margin-bottom:16px}
+.pstory-body p{font-size:15.5px;line-height:1.62;color:#3c473f;margin-bottom:12px}
+.pstory-body p:last-of-type{margin-bottom:0}
+.pstory-sign{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.pstory-sign .stars{margin:0}
+.pstory-sign .stars svg{width:15px;height:15px}
+.pstory-sign b{font:700 13px/1 "Manrope",sans-serif;color:var(--ink)}
+.pstory-nav{display:flex;align-items:center;gap:14px;margin-top:28px}
+.pstory-arrow{
+  width:44px;height:44px;flex:none;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--ink);
+  display:grid;place-items:center;cursor:pointer;transition:border-color .2s ease,color .2s ease,transform .15s ease;
+}
+.pstory-arrow:hover{border-color:var(--accent);color:var(--accent)}
+.pstory-arrow:active{transform:translateY(1px)}
+.pstory-arrow svg{width:18px;height:18px}
+.pstory-dots{display:flex;gap:8px;margin-left:4px}
+.pstory-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#cdd6c5;cursor:pointer;transition:background .2s ease,transform .2s ease}
+.pstory-dots button.active{background:var(--accent);transform:scale(1.3)}
+.pstory-count{margin-left:auto;font:700 13px/1 "Manrope",sans-serif;color:var(--muted)}
+html:not(.js) .pstory{position:relative;opacity:1;visibility:visible;margin-bottom:40px}
+html:not(.js) .pstory-viewport{height:auto!important}
+@media(max-width:820px){
+  .pstory{grid-template-columns:1fr;gap:22px}
+  .pstory-photo{min-height:0;aspect-ratio:4/3}
+  .pstory-photo img{object-position:center 12%}
+}
+
+/* ---------- contact ---------- */
+.contact{background:var(--bg)}
+.contact-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,76px);align-items:start;margin-bottom:28px}
+.contact h2{margin-bottom:22px}
+.phone{display:inline-block;font:800 clamp(25px,3.2vw,42px)/1 "Manrope",sans-serif;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em}
+.phone:hover{color:var(--accent)}
+.contact address{font-style:normal;font-size:15.5px;color:var(--body)}
+.transit{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:9px}
+.transit li{font-size:14px;line-height:1.45;color:var(--body);padding-left:20px;position:relative}
+.transit li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.transit li b{color:var(--ink);font:700 13px/1 "Manrope",sans-serif}
+.contact-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 24px}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;font-size:14.5px;color:var(--ink);border-bottom:1px solid var(--line)}
+.hours div:last-child{border-bottom:0}
+.hours span{color:var(--muted)}
+.map{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);height:clamp(300px,36vw,440px)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.2)}
+.map-card{position:absolute;left:18px;bottom:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow)}
+.map-card b{display:block;font-family:"Manrope",sans-serif;color:var(--ink);font-size:16px}
+.map-card small{color:var(--muted);font-size:12.5px}
+
+/* ---------- faq ---------- */
+.faq{background:var(--bg)}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,72px);align-items:start}
+.faq-aside{position:sticky;top:104px}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-list details{--faq-accent:#165db4;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(22,40,63,.05);overflow:hidden;transition:border-color .28s ease,box-shadow .28s ease}
+.faq-list details:nth-child(2){--faq-accent:#28914c}
+.faq-list details:nth-child(3){--faq-accent:#f2b900}
+.faq-list details:nth-child(4){--faq-accent:#ef3028}
+.faq-list details:nth-child(5){--faq-accent:#165db4}
+.faq-list details:hover,.faq-list details[open]{border-color:#b7cbea;box-shadow:0 16px 38px rgba(22,40,63,.09)}
+.faq-list summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:22px 1fr auto;align-items:center;gap:20px;padding:22px 30px;font:700 17px/1.4 "Manrope",sans-serif;color:var(--ink);transition:color .2s ease}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::before{content:"";width:22px;height:22px;background:var(--faq-accent);border-radius:4px;transform:rotate(45deg)}
+.faq-list summary::after{content:"";width:11px;height:11px;margin-right:6px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg);transition:transform .25s ease}
+.faq-list summary:hover{color:var(--accent)}
+.faq-list details[open] summary::after{transform:rotate(-135deg)}
+.faq-list details>p{margin:0;padding:0 42px 24px 72px;font-size:14.5px;line-height:1.68;color:var(--body);max-width:66ch}
+
+/* ---------- footer ---------- */
+.footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:42px 0}
+.footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer p{font-size:12px;color:var(--muted);max-width:44ch}
+.footer-links{display:flex;gap:20px;font:600 13px/1 "Manrope",sans-serif;color:var(--body)}
+.footer-links a:hover{color:var(--accent)}
+
+/* ---------- quick + lightbox ---------- */
+.quick{position:fixed;right:16px;bottom:16px;z-index:55;display:flex;flex-direction:column;gap:9px}
+.quick>a{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px rgba(30,70,55,.34)}
+.quick>a svg{width:19px;height:19px}
+.quick{align-items:flex-end}
+.fab-toggle{width:56px;height:56px;border:0;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 12px 28px rgba(22,93,180,.3);transition:transform .2s ease,background .2s ease;position:relative}
+.fab-toggle::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);animation:hspulse 2.6s ease-out infinite}
+.quick.open .fab-toggle::after{display:none}
+.fab-toggle:hover{background:var(--accent-ink)}
+.fab-toggle svg{width:24px;height:24px;grid-area:1/1;transition:opacity .2s ease,transform .25s ease}
+.fab-close{opacity:0;transform:rotate(-90deg)}
+.quick.open .fab-open{opacity:0;transform:rotate(90deg)}
+.quick.open .fab-close{opacity:1;transform:none}
+.fab-menu{display:flex;flex-direction:column;align-items:flex-end;gap:10px;margin-bottom:4px}
+.fab-item{display:flex;align-items:center;gap:10px;opacity:0;visibility:hidden;transform:translateY(14px) scale(.9);transition:opacity .22s ease,transform .25s cubic-bezier(.16,1,.3,1),visibility .22s}
+.quick.open .fab-item{opacity:1;visibility:visible;transform:none}
+.quick.open .fab-item:nth-child(4){transition-delay:0s}
+.quick.open .fab-item:nth-child(3){transition-delay:.04s}
+.quick.open .fab-item:nth-child(2){transition-delay:.08s}
+.quick.open .fab-item:nth-child(1){transition-delay:.12s}
+.fab-item i{width:48px;height:48px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.18);transition:transform .15s ease}
+.fab-item:hover i{transform:scale(1.08)}
+.fab-item i svg{width:24px;height:24px}
+.fab-label{background:#fff;color:var(--ink);font:700 13px/1 "Manrope",sans-serif;padding:9px 13px;border-radius:999px;box-shadow:var(--shadow);white-space:nowrap}
+.quick a.up{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}
+.lightbox{position:fixed;z-index:90;inset:0;background:rgba(18,30,24,.92);display:grid;place-items:center;padding:24px}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:92vw;max-height:84vh;border-radius:10px}
+.lightbox button{position:absolute;top:18px;right:18px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:var(--ink);font-size:22px;cursor:pointer}
+
+/* ---------- unified geometric visual system ---------- */
+:root{--bg:#fff;--bg-soft:#f6f8fb;--ink:#202936;--body:#68707b;--muted:#89919c;--accent:#165db4;--accent-ink:#0d4d98;--accent-soft:#eaf2fc;--line:#e4e8ee;--star:#f2b900;--shadow:0 15px 42px rgba(22,40,63,.07)}
+body{background:#fff;color:var(--body)}h1,h2,h3{font-family:"Manrope",sans-serif;color:var(--ink);letter-spacing:-.025em}h2{font-weight:800}
+.eyebrow{background:none!important;color:#165db4!important;padding:0;border-radius:0;letter-spacing:.12em}.section{position:relative}
+.section:not(.services)::before{content:"";position:absolute;width:72px;height:72px;border:1.5px solid rgba(22,93,180,.16);border-radius:8px;transform:rotate(45deg);pointer-events:none}.section:nth-of-type(odd)::before{left:-52px;top:80px}.section:nth-of-type(even)::before{right:-52px;top:90px}
+.btn-primary{background:#165db4;color:#fff;box-shadow:0 10px 24px rgba(22,93,180,.2)}.btn-primary:hover{background:#0d4d98}.btn-ghost{border-color:#165db4;color:#165db4;background:#fff}.arrowlink{color:#165db4}
+.consult,.promo,.gallery,.band{background:#fff;color:var(--body)}.consult::after,.promo::after,.gallery::after,.band::after,.band::before,.consult-wave,.band-wave{display:none}
+.consult .wrap{align-items:flex-start;text-align:left;max-width:1100px}.consult h2,.promo h2,.gallery h2{color:var(--ink)}.consult h2 .hl{color:inherit;font-style:normal}.consult>.wrap>p{color:var(--body);max-width:62ch}
+.consult-list{max-width:none;grid-template-columns:repeat(4,1fr);gap:16px}.consult-list li{background:#fff;border:1px solid var(--line);border-radius:18px;color:var(--ink);min-height:98px;padding:20px;box-shadow:var(--shadow)}.consult-list li:hover{border-color:#b7cbea}.consult-list li svg{color:#fff;background:#165db4;box-shadow:none}
+.consult .btn-primary,.promo-note .btn-primary{background:#165db4;color:#fff;box-shadow:0 10px 24px rgba(22,93,180,.2)}.consult .btn-primary:hover,.promo-note .btn-primary:hover{background:#0d4d98}
+.video{background:#f6f8fb}.video .eyebrow{background:none}.video-list li{border-color:var(--line);border-radius:16px;box-shadow:0 8px 24px rgba(22,40,63,.05)}.video-list .ti{background:#eaf2fc;color:#165db4}.video-list li:hover .ti{background:#165db4;color:#fff}.video-clip{border:10px solid #fff;border-radius:22px;box-shadow:0 22px 50px rgba(22,40,63,.13)}.video-clip .play{background:#165db4;box-shadow:0 12px 30px rgba(22,93,180,.3)}
+.promo{background:#f6f8fb}.promo-head{max-width:680px}.promo-head p{color:var(--body)}.promo-grid{grid-template-columns:repeat(4,1fr);gap:20px}.promo-card{--promo-accent:#ef3028;background:#fff;color:var(--body);border:1px solid var(--line);border-radius:20px;padding:25px 22px;box-shadow:var(--shadow)}.promo-card:nth-child(2){--promo-accent:#165db4}.promo-card:nth-child(3){--promo-accent:#28914c}.promo-card:nth-child(4){--promo-accent:#f2b900}
+.promo-card:hover{border-color:#cbd5e3;box-shadow:0 22px 48px rgba(22,40,63,.11)}.promo-card .tag{background:color-mix(in srgb,var(--promo-accent) 10%,white);border:0;color:var(--promo-accent)}.promo-card .val{color:var(--promo-accent)}.promo-card .val s{color:var(--muted)}.promo-card h3{color:var(--ink)}.promo-card>p{color:var(--body)}.promo-note{background:#fff;border-color:var(--line);box-shadow:var(--shadow)}.promo-note span{color:var(--body)}
+.akcii{background:#fff}
+.akcii .promo-grid{grid-template-columns:repeat(3,1fr)}@media(max-width:1050px){.akcii .promo-grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.akcii .promo-grid{grid-template-columns:1fr}}
+#news{background:#f6f8fb}.news-featured{border-color:var(--line);border-radius:20px;box-shadow:var(--shadow)}.news-featured .kind{color:#165db4}
+.band{background:#165db4;text-align:left;padding-block:var(--sp)}.band .wrap{align-items:flex-start}.band p.intro{color:#cfe0f5}.band blockquote{color:#fff;font-family:"Manrope",sans-serif;font-style:normal;font-weight:800;max-width:27ch}.band cite{color:#d8e6f7}.band .stars{justify-content:flex-start}
+.pstories{background:#f6f8fb}.pstory-photo{border:10px solid #fff;border-radius:22px;box-shadow:var(--shadow)}.team-section .pstory-photo{border:0}.pstory-body .kind{color:#165db4}.pstory-sign{border-color:var(--line)}.pstory-dots button{background:#cbd5e3}.pstory-dots button.active{background:#165db4}.pstory-arrow:hover{border-color:#165db4;color:#165db4}
+.reviews{background:#fff}.review-summary,.review{border-color:var(--line);border-radius:20px;box-shadow:var(--shadow)}.review:hover{border-color:#cbd5e3;box-shadow:0 22px 48px rgba(22,40,63,.11)}.review p{color:#3d4652}.review footer{border-color:var(--line)}.review footer a:hover{color:#165db4}
+.faq{background:#f6f8fb}
+.gallery{background:#fff}.gallery-subtitle{color:var(--ink)}.works-cap{color:var(--body)}.wslider{border:0;background:#eef2f6;box-shadow:0 18px 44px rgba(22,40,63,.12);border-radius:22px}.works-col:hover .wslider{border-color:transparent;box-shadow:0 26px 56px rgba(22,40,63,.17)}.wslider-arrow{background:rgba(22,93,180,.9)}.wslider-arrow:hover{background:#0d4d98}
+.contact{background:#f6f8fb}.phone{color:var(--ink)}.phone:hover{color:#165db4}.transit li::before{background:#165db4}.hours,.map-card{border-color:var(--line);border-radius:18px;box-shadow:var(--shadow)}.map{border:10px solid #fff;border-radius:22px;box-shadow:0 20px 48px rgba(22,40,63,.12)}
+.footer{background:#202936;border-top:0}.footer p{color:#aeb7c3}.footer-links{color:#dbe1e8}.footer-links a:hover{color:#fff}.quick>a{background:#165db4;box-shadow:0 12px 28px rgba(22,93,180,.28)}
+.footer .brand-mark{width:56px;height:60px}.footer .brand-wordmark{text-transform:none;letter-spacing:normal}.footer .brand-wordmark strong{font-size:30px}.footer .brand-wordmark small{color:#fff}.footer .brand-wordmark em{display:none}
+@media(max-width:1050px){.consult-list,.promo-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.consult-list,.promo-grid{grid-template-columns:1fr}.section:not(.services)::before{opacity:.5}}
+
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .nav{display:none}
+  .hero{min-height:auto;padding-bottom:clamp(110px,20vw,150px)}
+  .metrics .wrap{margin-top:calc(-1 * clamp(20px,4vw,40px))}
+  .about .wrap,.video .wrap,.contact-top,.faq .wrap{grid-template-columns:1fr}
+  .faq-aside{position:static}
+  .review-summary .rs-tags{margin-left:0}
+  .about-photo{order:-1}
+  .news-row{flex-direction:column;align-items:flex-start;gap:8px}
+}
+@media(max-width:1080px){
+  .svc{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  .svc{
+    display:flex;grid-template-columns:none;gap:14px;
+    overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    margin-inline:calc(-1 * var(--pad));padding:2px var(--pad) 10px;
+  }
+  .svc .card{flex:0 0 76%;max-width:300px;scroll-snap-align:start}
+}
+@media(max-width:620px){
+  .metrics .wrap{grid-template-columns:1fr 1fr}
+  .metric{border-right:0;border-bottom:1px solid var(--line)}
+  .metric:nth-child(odd){border-right:1px solid var(--line)}
+  .metric:nth-last-child(-n+2){border-bottom:0}
+  .review-grid{columns:1}
+  .video-list{grid-template-columns:1fr}
+  .consult-list{grid-template-columns:1fr;max-width:340px}
+  .promo-note span{min-width:0}
+  .promo-note .btn-primary{margin-left:0}
+  .hero-scroll{width:62px;height:62px;bottom:clamp(28px,7vw,42px)}
+  .gallery-head,.news-head{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+  .js .reveal,.js .reveal.in{opacity:1!important;transform:none!important;transition:none;animation:none!important}
+  .js .hero .hero-inner>*{opacity:1!important;transform:none!important;transition:none}
+  .preloader{animation:none}
+  .scrollprog{display:none}
+}
+
+/* Clinic introduction — reference composition */
+.clinic-about{scroll-margin-top:90px;padding:var(--sp) 0;background:#f6f8fb;color:#202936}
+.clinic-about-wrap{max-width:1280px;padding:0 var(--pad);margin:auto}
+.clinic-about-top{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);gap:26px;padding:0 0 42px}
+.clinic-label{display:block;color:#005acb;font-size:15px;font-weight:500;margin-bottom:22px;line-height:1.4}
+.clinic-about h2{font-size:clamp(28px,4.2vw,46px);line-height:1.1;letter-spacing:-.035em;margin:0 0 36px;color:#202936}
+.clinic-story{display:grid;gap:26px}
+.clinic-story-row{display:grid;grid-template-columns:66px minmax(0,1fr);gap:27px;align-items:start}
+.clinic-story-row p{font-size:15.5px;line-height:1.6}
+.clinic-story-icon{width:48px;height:48px;border:1.4px solid var(--icon-color);border-radius:8px;transform:rotate(45deg);display:grid;place-items:center;margin:8px;color:var(--icon-color)}
+.clinic-kids-copy .clinic-story-row{grid-template-columns:1fr}
+.clinic-story-icon svg{width:31px;height:31px;transform:rotate(-45deg)}
+.clinic-art{position:relative;min-height:540px}
+.clinic-art img{position:absolute;width:25%;left:37%;top:32%;mix-blend-mode:multiply;z-index:2}
+.clinic-diamond{position:absolute;display:block;transform:rotate(45deg);border-radius:12px}
+.diamond-blue{width:168px;height:168px;right:3%;top:3%;background:#145bb9}
+.diamond-red{width:139px;height:139px;left:5%;top:52%;background:#e9292e}
+.diamond-green{width:138px;height:138px;left:39%;top:73%;background:#308849}
+.diamond-yellow{width:64px;height:64px;right:5%;top:79%;background:#ffbe13}
+.diamond-outline-one{width:106px;height:106px;border:2px solid #e9ebef;left:-7%;top:8%}
+.diamond-outline-two{width:124px;height:124px;border:2px solid #e9ebef;right:-4%;top:54%}
+.clinic-kids{position:relative;overflow:hidden;border-radius:26px;background:#eff4fa;display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:30px;padding:34px 0 34px 42px;align-items:center}
+.clinic-kids .clinic-label{margin-bottom:20px}
+.clinic-kids h3{font:800 clamp(26px,2.2vw,35px)/1.15 "Manrope",sans-serif;letter-spacing:-.03em;color:#202936;margin-bottom:22px}
+.clinic-kids-copy>p{font-size:14px;line-height:1.8;color:#566173}
+.clinic-kids-link{display:inline-flex;align-items:center;gap:14px;background:#0b59c0;color:white;border-radius:30px;padding:11px 22px;margin-top:26px;font-size:13px;font-weight:500;line-height:1.5}
+.clinic-kids-link:hover{background:#084897}.clinic-kids-link:focus-visible{outline:3px solid #f7b900;outline-offset:4px}
+.clinic-kids-features{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.clinic-kids-feature{display:flex;align-items:flex-start;gap:18px;padding:24px 0;position:relative}
+.clinic-kids-feature:nth-child(-n+2){border-bottom:1px solid #d1dce9}
+.clinic-kids-feature:nth-child(odd)::after{content:"";position:absolute;right:-12px;top:24px;bottom:24px;border-right:1px solid #d1dce9}
+.clinic-kids-feature>span{display:grid;place-items:center;flex:none;width:66px;height:72px;border-radius:18px;background:#fff;color:var(--icon-color)}
+.clinic-kids-feature svg{width:43px;height:43px}
+.clinic-kids-feature h4{font-size:12px;font-weight:500;line-height:1.5;margin:10px 0 9px}
+.clinic-kids-feature p{font-size:11.5px;line-height:1.9;color:#566173}
+.clinic-kids-photo{align-self:stretch;position:relative;min-height:280px}
+.clinic-kids-photo img{position:absolute;width:125%;max-width:none;height:130%;top:-15%;left:0;object-fit:cover;object-position:45% center;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.clinic-kids-photo i,.clinic-kids-photo b{position:absolute;width:36px;height:36px;transform:rotate(45deg);border-radius:6px;background:#e9292e;bottom:10px;left:8%}
+.clinic-kids-photo b{background:#145bb9;left:auto;right:25px;bottom:-24px;width:42px;height:42px}
+@media(min-width:1450px){.clinic-story-row p{font-size:16px}.clinic-about-top{grid-template-columns:minmax(0,1.7fr) minmax(300px,1fr)}}
+@media(max-width:1449px){.clinic-wide-break{display:none}}
+@media(max-width:1150px){.clinic-about-top{grid-template-columns:minmax(0,2fr) minmax(220px,1fr)}.clinic-art{transform:scale(.85);transform-origin:center top}.clinic-story-row{gap:18px}.clinic-wide-break{display:none}.clinic-kids{grid-template-columns:1fr 1.5fr;padding:30px;gap:26px}.clinic-kids-photo{display:none}}
+@media(max-width:760px){.clinic-about-top{display:block;padding-bottom:30px}.clinic-art{display:none}.clinic-about h2{margin-bottom:28px}.clinic-label{font-size:13px;margin-bottom:18px}.clinic-story-row{grid-template-columns:43px minmax(0,1fr);gap:18px}.clinic-story-icon{width:34px;height:34px;margin:6px 3px}.clinic-story-icon svg{width:24px;height:24px}.clinic-story-row p{font-size:14px}.clinic-kids{grid-template-columns:1fr;padding:26px 22px;gap:10px}.clinic-kids-copy>p{max-width:48ch}.clinic-kids-features{gap:0 22px}.clinic-kids-feature{display:block}.clinic-kids-feature>span{width:54px;height:58px}.clinic-kids-feature h4{font-size:12px}.clinic-kids-link{padding-inline:16px;font-size:12px}}
+
+</style>
+<style>
+/* Shared responsive layout and navigation. */
+.section{overflow-x:clip}
+.menu-toggle{display:none}
+.menu-toggle:focus-visible,.nav a:focus-visible{outline:3px solid #165db4;outline-offset:4px}
+@media(max-width:1150px){
+  .header .wrap{gap:10px}
+  .header .nav{display:none}
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:0;border:1px solid #165db4;border-radius:12px;background:#fff;color:#165db4;font:700 12px/1 "Manrope",sans-serif;cursor:pointer;margin-left:auto}
+  .header .header-call{font-size:0;padding:12px!important;flex:none}
+  .header .header-call svg{width:18px!important;height:18px!important;margin:0}
+  .header .nav.mobile-open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:12px var(--pad) 20px;background:#fff;border-bottom:1px solid #e4e8ee;box-shadow:0 16px 24px #20293612;max-height:calc(100dvh - 80px);overflow-y:auto}
+  .header .nav.mobile-open a{display:block;padding:14px 0;font-size:16px;line-height:1.3}
+}
+@media(max-width:720px){
+  .hero{display:block;padding-bottom:36px}
+  .hero .wrap{min-width:0}
+  .hero-features{position:relative;left:auto;right:auto;bottom:auto;transform:none;width:calc(100% - 2 * var(--pad));max-width:none;margin:30px var(--pad) 0;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-feature{min-width:0;max-width:none;gap:8px;padding:8px;font-size:11px}
+  .hero-feature .feature-diamond{flex-shrink:0}
+  .hero-feature>span{overflow-wrap:anywhere}
+  .promo-note{flex-direction:column;align-items:stretch}
+  .promo-note span{flex:auto;min-width:0}
+  .promo-note .btn{align-self:flex-start;margin-left:0;white-space:normal;line-height:1.4}
+  .section::before{display:none}
+  .pstory-nav{flex-wrap:wrap;gap:10px}
+  .pstory-dots{flex-wrap:wrap;max-width:100%}
+  .news-item.featured .news-feature-info{padding-bottom:24px}
+  .news-item summary>.kind{grid-column:2}
+  .reviews-more .btn,.video-copy>.btn{white-space:normal;line-height:1.4;max-width:100%}
+  .price-groups{grid-template-columns:minmax(0,1fr)}
+  .pg{min-width:0;padding-inline:20px}
+  .pg dl>div{gap:12px}
+  .pg dt{min-width:0;overflow-wrap:anywhere}
+  .pg dd{flex-shrink:0}
+  .phero-in,.cta .wrap>div{min-width:0;max-width:100%}
+  .phero h1{overflow-wrap:anywhere}
+  .footer-links{flex-wrap:wrap}
+}
+@media(max-width:680px){
+  .svc{padding-top:64px;padding-bottom:18px}
+  .svc .card{flex:0 0 min(300px,calc(100vw - 2 * var(--pad)));max-width:300px}
+  .card .ico{width:180px;height:180px;margin-bottom:62px}
+}
+</style>
+<script src="mobile-nav.js" defer></script>
+<script src="scroll-progress.js" defer></script>
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+  <div class="pl-logo">
+    <img class="brand-mark" src="public/brand-mark.png" alt="">
+    <span class="brand-wordmark"><small>стоматология</small><strong>Миро-Дент</strong><em>стоматологический центр</em></span>
+  </div>
+  <div class="pl-track"><i id="plBar"></i></div>
+  <div class="pl-pct" id="plPct">0%</div>
+</div>
+
+<div class="scrollprog" id="scrollprog"></div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="#top"><img class="brand-mark" src="public/brand-mark.png" alt=""><span class="brand-wordmark"><small>стоматология</small><strong>Миро-Дент</strong><span class="header-city">Знаменский</span></span></a>
+    <nav class="nav">
+      <a href="#services">Услуги</a>
+      <a href="#team">Врачи</a>
+      <a href="#akcii">Акции</a>
+      <a href="prices.html">Цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a class="btn btn-primary header-call" href="tel:+79885590303">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+      +7 988 559-03-03
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="yb-pin"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2c-3.9 0-7 3-7 6.9 0 4.6 5.4 11.3 6.4 12.5.3.4.9.4 1.2 0 1-1.2 6.4-7.9 6.4-12.5C19 5 15.9 2 12 2zm0 9.6a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4z"/></svg></span>
+        <span><b>Рейтинг 4,9</b> на Яндекс&nbsp;Картах <i>· 56&nbsp;оценок</i></span>
+      </div>
+      <h1>Семейная стоматология для взрослых и детей</h1>
+      <p>Лечим взрослых и детей в Знаменском — от первого осмотра до протезирования и исправления прикуса. Консультация бесплатная.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+79885590303">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+          Записаться на приём
+        </a>
+        <a class="btn btn-ghost" href="#gallery">
+          Наша клиника
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual"><img src="public/hero-tooth-panels.png" alt="Объёмная модель зуба на цветных геометрических панелях"></div>
+  </div>
+  <div class="hero-features" aria-label="Основные направления">
+    <div class="hero-feature"><i class="feature-diamond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="7"/><path d="M9 14c2 2 4 2 6 0M9 10h.01M15 10h.01"/></svg></i><span>Детская стоматология</span></div>
+    <div class="hero-feature"><i class="feature-diamond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 0 5 2 5 5 0 2-1 3-1 6s-1 5-2 5-1-3-2-3-1 3-2 3-2-2-2-5-1-4-1-6c0-3 2-5 5-5z"/></svg></i><span>Бережное лечение зубов</span></div>
+    <div class="hero-feature"><i class="feature-diamond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 4v16M8 8h8M9 12h6M10 16h4"/><path d="M8 4h8l2 4-6 12L6 8z"/></svg></i><span>Протезирование и хирургия</span></div>
+    <div class="hero-feature"><i class="feature-diamond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 8v8M19 8v8M5 10c4 2 10 2 14 0M5 14c4-2 10-2 14 0"/><path d="M8 9v6M12 10v4M16 9v6"/></svg></i><span>Брекеты и элайнеры</span></div>
+  </div>
+  <button class="hero-scroll" id="heroScroll" type="button" aria-label="Перейти к разделу «Направления»">
+    <svg class="hs-ring" viewBox="0 0 100 100" aria-hidden="true">
+      <defs><path id="hsCirc" d="M50,50 m-33,0 a33,33 0 1,1 66,0 a33,33 0 1,1 -66,0"/></defs>
+      <text textLength="204" lengthAdjust="spacing"><textPath href="#hsCirc" startOffset="0">листайте вниз • направления • </textPath></text>
+    </svg>
+    <svg class="hs-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v13M6 12l6 6 6-6"/></svg>
+  </button>
+</section>
+
+<!-- METRICS -->
+<section class="metrics">
+  <div class="wrap">
+    <div class="metric reveal"><b data-count="4.9" data-dec="1">4,9</b><span>рейтинг на Яндекс&nbsp;Картах</span></div>
+    <div class="metric reveal d1"><b data-count="56">56</b><span>оценок пациентов</span></div>
+    <div class="metric reveal d2"><b data-count="34">34</b><span>отзыва на Яндексе</span></div>
+    <div class="metric reveal d3"><b data-count="7">7</b><span>дней в неделю без выходных</span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="services-head reveal">
+      <span class="eyebrow">Направления стоматологии</span>
+      <h2>Стоматология для всей семьи</h2>
+      <p>Комплексный подход, современное оборудование и забота о каждом пациенте на всех этапах лечения.</p>
+    </div>
+    <div class="svc">
+      <article class="card reveal rl">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 0 5 2 5 5 0 2-1 3-1 6s-1 5-2 5-1-3-2-3-1 3-2 3-2-2-2-5-1-4-1-6c0-3 2-5 5-5z"/></svg></div>
+        <h3>Лечение зубов</h3>
+        <p>Лечение кариеса, пульпита и периодонтита, лечение каналов, реставрация зубов. Снимки — прямо в кабинете.</p>
+        <a class="arrowlink" href="prices.html">Цены <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </article>
+      <article class="card reveal rr d1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Детская стоматология</h3>
+        <p>Отдельный яркий кабинет, адаптационный приём, герметизация фиссур, лечение молочных зубов, справки и медосмотр.</p>
+        <a class="arrowlink" href="prices.html">Цены <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </article>
+      <article class="card reveal rl d2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></div>
+        <h3>Ортодонтия</h3>
+        <p>Лигатурные, самолигирующие и керамические брекеты, элайнеры, детские пластинки и аппарат Марко-Росса.</p>
+        <a class="arrowlink" href="prices.html">Цены <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </article>
+      <article class="card reveal rr d3">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l7 7M9 6 6 9M14 10l6 6a2 2 0 0 1-3 3l-6-6M12 12l-6 6a2 2 0 0 1-3-3l6-6"/></svg></div>
+        <h3>Хирургия и протезирование</h3>
+        <p>Удаление зубов, лечение кисты, костная пластика, коронки из циркония, виниры, съёмные протезы.</p>
+        <a class="arrowlink" href="prices.html">Цены <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </article>
+      <article class="card reveal rl d2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 0 5 2 5 5 0 2-1 3-1 6s-1 5-2 5-1-3-2-3-1 3-2 3-2-2-2-5-1-4-1-6c0-3 2-5 5-5z"/></svg></div>
+        <h3>Профессиональная гигиена</h3>
+        <p>Ультразвуковая чистка, Air Flow, шлифовка, полировка и фторирование эмали.</p>
+        <a class="arrowlink" href="prices.html">Цены <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </article>
+      <article class="card reveal rr d3">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Лечение дёсен</h3>
+        <p>Лечение пародонта, плазмолифтинг дёсен, шинирование подвижных зубов.</p>
+        <a class="arrowlink" href="prices.html">Цены <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </article>
+    </div>
+    <div class="trust-strip reveal">
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c3 0 5 2 5 5 0 2-1 3-1 6s-1 5-2 5-1-3-2-3-1 3-2 3-2-2-2-5-1-4-1-6c0-3 2-5 5-5z"/></svg><span>Бесплатная<br>консультация</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg><span>Гарантия на лечение</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 10h8M8 14h8"/></svg><span>Снимки прямо в кабинете</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7" r="4"/><path d="M5 22v-3a7 7 0 0 1 14 0v3"/></svg><span>Доступная среда</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- О КЛИНИКЕ -->
+<section class="clinic-about" id="about" aria-labelledby="clinic-about-title">
+ <div class="clinic-about-wrap">
+  <div class="clinic-about-top">
+   <div class="clinic-about-copy">
+    <span class="clinic-label">О НАС</span>
+    <h2 id="clinic-about-title">Стоматология,<br>которой можно доверять</h2>
+    <div class="clinic-story">
+     <div class="clinic-story-row"><span class="clinic-story-icon" style="--icon-color:#0060d5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5C7 1 3 5 4 10c1 3 2 3 2 8 0 4 3 4 3 0v-3c0-3 6-3 6 0v3c0 4 3 4 3 0 0-5 1-5 2-8 1-5-3-9-8-5Z"/></svg></span><p>«Миро-Дент» — стоматология в жилом районе посёлка Знаменский, куда можно прийти всей семьёй. Терапия, хирургия, протезирование, ортодонтия и отдельный детский кабинет.</p></div>
+     <div class="clinic-story-row"><span class="clinic-story-icon" style="--icon-color:#38964e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-5 8-9 10-4-2-9-5-9-10V6Z"/><path d="m8 12 3 3 5-6"/></svg></span><p>На бесплатной консультации врач составляет план лечения и сразу называет итоговую сумму — без навязанных услуг. Льготным категориям — скидки.</p></div>
+    </div>
+   </div>
+   <div class="clinic-art" aria-hidden="true"><i class="clinic-diamond diamond-blue"></i><i class="clinic-diamond diamond-red"></i><i class="clinic-diamond diamond-green"></i><i class="clinic-diamond diamond-yellow"></i><i class="clinic-diamond diamond-outline-one"></i><i class="clinic-diamond diamond-outline-two"></i><img src="public/brand-mark.png" alt="" loading="lazy"></div>
+  </div>
+  <div class="clinic-kids">
+   <div class="clinic-kids-copy"><span class="clinic-label">ДЕТСКАЯ СТОМАТОЛОГИЯ</span><h3>Забота о здоровье<br>с ранних лет</h3>     <div class="clinic-story-row"><p>Яркий кабинет с героями мультфильмов и детским креслом. Дети приходят на приём без страха — а после ещё и с подарком.</p></div><a class="clinic-kids-link" href="prices.html#children">Подробнее о детской стоматологии <span aria-hidden="true">→</span></a></div>
+   <div class="clinic-kids-features">
+    <div class="clinic-kids-feature"><span style="--icon-color:#f02a31"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6C-1 3 2-2 7 2l2 2h6l2-2c5-4 8 1 2 4 6 8 2 16-7 16S-1 14 5 6Z"/><path d="M8 10h.1M16 10h.1M10 14h4l-2 2Zm2 2v3m-3-1c1 2 2 2 3 1 1 1 2 1 3-1"/></svg></span><div><h4>Доброжелательная атмосфера</h4><p>Дети чувствуют себя комфортно с первых минут.</p></div></div>
+    <div class="clinic-kids-feature"><span style="--icon-color:#0060d5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-5 8-9 10-4-2-9-5-9-10V6Z"/><path d="m8 12 3 3 5-6"/></svg></span><div><h4>Без боли и стресса</h4><p>Мягкий подход и современные методы лечения.</p></div></div>
+    <div class="clinic-kids-feature"><span style="--icon-color:#38964e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 14c2 5 8 5 10 0"/><circle cx="8" cy="9" r=".7"/><circle cx="16" cy="9" r=".7"/></svg></span><div><h4>Подход к каждому ребёнку</h4><p>Наши врачи находят общий язык с детьми любого возраста.</p></div></div>
+    <div class="clinic-kids-feature"><span style="--icon-color:#f7b900"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 3 4 11h11l2 5H8L2 4c-1-3 2-4 3-1ZM10 19l-2 4m10-4 2 4M9 10h8c2 0 2 4 0 4"/></svg></span><div><h4>Справки и медосмотр</h4><p>Осмотр с выдачей справки для сада и школы.</p></div></div>
+   </div>
+   <div class="clinic-kids-photo"><img src="public/miro/miro-kids-1.webp" alt="Детский кабинет стоматологии «Миро-Дент»" loading="lazy"><i></i><b></b></div>
+  </div>
+ </div>
+</section>
+
+<!-- АКЦИИ -->
+<section class="section promo akcii" id="akcii">
+  <div class="wrap">
+    <div class="promo-head reveal">
+      <span class="eyebrow">Акции</span>
+      <h2>Выгодные предложения</h2>
+      <p>Условия уточняйте при записи по телефону. Свежие акции — в нашем Telegram-канале.</p>
+    </div>
+    <div class="promo-grid">
+      <article class="promo-card reveal rl">
+        <span class="tag">Первый визит</span>
+        <span class="val">Бесплатно</span>
+        <h3>Консультация и план лечения</h3>
+        <p>Врач осмотрит, составит план лечения и сразу назовёт итоговую стоимость — решение остаётся за вами.</p>
+      </article>
+      <article class="promo-card reveal rr d1">
+        <span class="tag">Скидки</span>
+        <span class="val">Льготникам</span>
+        <h3>Скидки льготным категориям</h3>
+        <p>Для льготных категорий пациентов действуют скидки на услуги клиники.</p>
+      </article>
+      <article class="promo-card reveal rl d2">
+        <span class="tag">Ортодонтия</span>
+        <span class="val">35 000 ₽</span>
+        <h3>Лигатурные брекеты</h3>
+        <p>Классическая брекет-система для ровного ряда зубов. Также самолигирующие и керамические системы.</p>
+      </article>
+    </div>
+    <div class="promo-note reveal">
+      <span>Записаться можно по телефону, в WhatsApp или Telegram.</span>
+      <a class="btn btn-primary" href="tel:+79885590303">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg>
+        Записаться
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- QUOTE BAND -->
+<section class="section band">
+  <svg class="band-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,90 C360,10 1080,10 1440,90 L1440,0 L0,0 Z" fill="#faf8f3"/></svg>
+  <div class="wrap reveal">
+    <p class="intro">Объясняем план лечения простыми словами и держим комфортный темп на приёме.</p>
+    <blockquote>«Если лечить зубы — то здесь»</blockquote>
+    <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg></div>
+    <cite>Из отзыва на Яндекс Картах</cite>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section pstories team-section" id="team">
+  <div class="wrap">
+    <div class="pstories-head reveal">
+      <span class="eyebrow">Наша команда</span>
+      <h2>Врачи «Миро-Дент»</h2>
+    </div>
+    <div class="pstory-slider reveal" data-pstories>
+      <div class="pstory-viewport">
+        <article class="pstory active">
+          <div class="pstory-photo">
+            <button data-photo="public/miro/doctor-sergey.webp"><img src="public/miro/doctor-sergey.webp" alt="Сергей Александрович Мирошников — стоматолог-ортопед"></button>
+          </div>
+          <div class="pstory-body">
+            <span class="kind">Стоматолог-ортопед</span>
+            <h3>Сергей Александрович Мирошников</h3>
+            <p>Протезирование и восстановление зубов. Пациенты пишут: «За 2 недели всё сделал. Спокойный, доброжелательный, работает быстро, но без суеты».</p>
+          </div>
+        </article>
+        <article class="pstory">
+          <div class="pstory-photo">
+            <button data-photo="public/miro/doctor-anastasia.webp"><img src="public/miro/doctor-anastasia.webp" alt="Анастасия Станиславовна — стоматолог-терапевт"></button>
+          </div>
+          <div class="pstory-body">
+            <span class="kind">Стоматолог-терапевт</span>
+            <h3>Анастасия Станиславовна</h3>
+            <p>Лечение кариеса и пломбирование. «Лечит качественно, аккуратно, быстро, сразу видно, что мастер своего дела».</p>
+          </div>
+        </article>
+        <article class="pstory">
+          <div class="pstory-photo">
+            <button data-photo="public/miro/doctor-svetlana.webp"><img src="public/miro/doctor-svetlana.webp" alt="Светлана Сергеевна — стоматолог-терапевт"></button>
+          </div>
+          <div class="pstory-body">
+            <span class="kind">Стоматолог-терапевт</span>
+            <h3>Светлана Сергеевна</h3>
+            <p>Терапевтическое лечение зубов. «Профессионал в своём деле, есть с чем сравнить. Очень внимательная».</p>
+          </div>
+        </article>
+        <article class="pstory">
+          <div class="pstory-photo">
+            <button data-photo="public/miro/doctor-denis.webp"><img src="public/miro/doctor-denis.webp" alt="Денис Михайлович — детский стоматолог"></button>
+          </div>
+          <div class="pstory-body">
+            <span class="kind">Детский стоматолог</span>
+            <h3>Денис Михайлович</h3>
+            <p>Лечит маленьких пациентов. «Любимый врач моих детей. Дети к нему спокойно идут и ничего не боятся».</p>
+          </div>
+        </article>
+      </div>
+      <div class="pstory-nav">
+        <button class="pstory-arrow prev" type="button" aria-label="Предыдущий специалист"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="pstory-arrow next" type="button" aria-label="Следующий специалист"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="pstory-dots"></div>
+        <span class="pstory-count">1 / 4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="reviews-head reveal">
+      <h2>Что говорят пациенты</h2>
+    </div>
+    <div class="review-summary reveal">
+      <div class="rs-score" data-count="4.9" data-dec="1">4,9</div>
+      <div class="rs-meta">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg></div>
+        <span>34 отзыва · 56 оценок на Яндекс Картах</span>
+      </div>
+      <div class="rs-tags"><b>Пациенты чаще всего отмечают</b>лечение без боли · детского врача · приятные цены</div>
+    </div>
+    <div class="review-grid">
+      <article class="review reveal rl">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg></div>
+        <p>Очень довольна лечением у стоматолога Анастасии. Я всегда боялась стоматологов — сейчас есть анестезия, которая реально работает. Все приёмы проходят со снимками прямо в кабинете врача.</p>
+        <footer><b>Настя М.</b><a href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">Яндекс Карты</a></footer>
+      </article>
+      <article class="review reveal rr d1">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg></div>
+        <p>За 2 недели протезирование сделал Мирошников Сергей Александрович. На бесплатной консультации сразу озвучивают итоговую сумму, и каждый может решить для себя.</p>
+        <footer><b>Татьяна</b><a href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">Яндекс Карты</a></footer>
+      </article>
+      <article class="review reveal rl d2">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg></div>
+        <p>Ходили к детскому стоматологу вырвать зуб. Обласкали, сказку рассказали, подарочки дали. Дочь ждёт, когда можно будет прийти к этому доктору ещё раз.</p>
+        <footer><b>Марина А.</b><a href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">Яндекс Карты</a></footer>
+      </article>
+      <article class="review reveal rr d3">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7-6.6-3.5L6.4 21l1.3-7-5-4.8 7-.9z"/></svg></div>
+        <p>Мы с сыном частые гости в этой клинике. В регистратуре всегда встречают приветливо. Лечились у Дениса Михайловича, остались довольны и качеством, и отношением.</p>
+        <footer><b>Марина К.</b><a href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">Яндекс Карты</a></footer>
+      </article>
+    </div>
+    <div class="reviews-more reveal">
+      <a class="btn btn-ghost" href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">
+        Смотреть больше отзывов на Яндекс Картах
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="faq-aside reveal rl">
+      <span class="eyebrow">Частые вопросы</span>
+      <h2>Перед первым визитом</h2>
+    </div>
+    <div class="faq-list">
+      <details class="reveal rr">
+        <summary>Как записаться на приём?</summary>
+        <p>Позвоните по телефону +7 (988) 559-03-03 или напишите в WhatsApp или Telegram — администратор подберёт врача и удобное время.</p>
+      </details>
+      <details class="reveal rr d1">
+        <summary>Как работает клиника?</summary>
+        <p>Клиника работает без выходных: с понедельника по пятницу с 09:00 до 20:00, в субботу и воскресенье — с 10:00 до 18:00. Время приёма конкретного врача уточняйте при записи.</p>
+      </details>
+      <details class="reveal rr d2">
+        <summary>Можно ли заранее узнать стоимость лечения?</summary>
+        <p>Полный прайс есть на странице «Цены». Консультация бесплатная: врач составит план лечения и сразу назовёт итоговую сумму.</p>
+      </details>
+      <details class="reveal rr d3">
+        <summary>Что взять с собой на первый приём?</summary>
+        <p>Если у вас есть недавние снимки, заключения или сведения о предыдущем лечении, возьмите их с собой. Врач определит, нужны ли дополнительные исследования.</p>
+      </details>
+      <details class="reveal rr d4">
+        <summary>Как добраться до клиники?</summary>
+        <p>Клиника находится в посёлке Знаменский, на Природной улице, 10Б, корпус 6 — вход с улицы под вывеской «Стоматология». Рядом есть парковка, вход доступен на инвалидной коляске.</p>
+      </details>
+      <details class="reveal rr d4">
+        <summary>Лечите ли вы детей?</summary>
+        <p>Да, в клинике отдельный детский кабинет. Есть адаптационный приём для тревожных детей, лечение молочных зубов, герметизация фиссур и детская ортодонтия.</p>
+      </details>
+      <details class="reveal rr d4">
+        <summary>Есть ли гарантия?</summary>
+        <p>Да, на лечение предоставляется гарантия. Условия зависят от вида работ — врач расскажет о них на приёме.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head reveal">
+      <h2>Фотогалерея</h2>
+    </div>
+    <div class="works-row">
+      <div class="works-col reveal ">
+        <h3 class="gallery-subtitle">Детский кабинет</h3>
+        <div class="wslider" data-slider>
+          <div class="wslider-track">
+            <div class="wslide"><button data-photo="public/miro/miro-kids-1.webp"><img src="public/miro/miro-kids-1.webp" loading="lazy" alt="Детский кабинет «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-kids-2.webp"><img src="public/miro/miro-kids-2.webp" loading="lazy" alt="Детский кабинет «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-kids-3.webp"><img src="public/miro/miro-kids-3.webp" loading="lazy" alt="Детский кабинет «Миро-Дент»"></button></div>
+          </div>
+          <button class="wslider-arrow prev" type="button" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="wslider-arrow next" type="button" aria-label="Следующее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="wslider-dots"></div>
+        </div>
+        <p class="works-cap">Яркий кабинет, в который дети идут без страха</p>
+      </div>
+      <div class="works-col reveal rr">
+        <h3 class="gallery-subtitle">Интерьер</h3>
+        <div class="wslider" data-slider>
+          <div class="wslider-track">
+            <div class="wslide"><button data-photo="public/miro/miro-facade.webp"><img src="public/miro/miro-facade.webp" loading="lazy" alt="Вход в клинику «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-facade-2.webp"><img src="public/miro/miro-facade-2.webp" loading="lazy" alt="Фасад «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-reception.webp"><img src="public/miro/miro-reception.webp" loading="lazy" alt="Ресепшен «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-cabinet-1.webp"><img src="public/miro/miro-cabinet-1.webp" loading="lazy" alt="Кабинет «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-cabinet-2.webp"><img src="public/miro/miro-cabinet-2.webp" loading="lazy" alt="Кабинет «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-chair.webp"><img src="public/miro/miro-chair.webp" loading="lazy" alt="Кресло «Миро-Дент»"></button></div>
+            <div class="wslide"><button data-photo="public/miro/miro-cabinet-3.webp"><img src="public/miro/miro-cabinet-3.webp" loading="lazy" alt="Кабинет «Миро-Дент»"></button></div>
+          </div>
+          <button class="wslider-arrow prev" type="button" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="wslider-arrow next" type="button" aria-label="Следующее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="wslider-dots"></div>
+        </div>
+        <p class="works-cap">Вход, ресепшен и лечебные кабинеты</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="news-head reveal">
+      <div class="news-title">
+        <span class="eyebrow">Новости клиники</span>
+        <h2>Будьте в курсе<br>наших новостей</h2>
+      </div>
+    </div>
+    <div class="news-list">
+      <details class="news-item featured reveal">
+        <summary>
+          <div class="news-feature-photo"><img src="public/miro/miro-cabinet-3.webp" alt="Кабинет «Миро-Дент»"></div>
+          <div class="news-feature-info"><span class="kind">Статья</span><h3>Лечение корневых каналов под микроскопом</h3></div>
+          <span class="news-toggle"><span>Читать</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="news-body">
+          <p>Боль в зубе, которая не проходит, — это всегда тревожный сигнал. Часто она означает, что воспаление затронуло корневые каналы, и без качественного лечения зуб можно потерять. Однако удалять зуб — не единственный вариант, особенно если в клинике есть дентальный микроскоп. В стоматологии «Миро-Дент» в Краснодаре мы лечим корневые каналы под микроскопом, что позволяет спасать даже самые сложные зубы.</p>
+          <p>Микроскоп увеличивает изображение в 40 раз, позволяя врачу видеть мельчайшие детали, которые невозможно разглядеть невооружённым глазом или даже на рентгеновском снимке. Это особенно важно при лечении зубов со сложной анатомией: искривлёнными, разветвлёнными каналами или нестандартным количеством каналов. Врач видит дополнительные каналы, трещины в корне и остатки старого пломбировочного материала — и может удалить все источники инфекции с ювелирной точностью.</p>
+          <p>Микроскоп также помогает при перелечивании зубов, когда предыдущее лечение было выполнено некачественно. Мы убираем старый материал, тщательно очищаем и дезинфицируем канал, а затем герметично закрываем его современными биосовместимыми материалами. Это снижает риск повторного воспаления и помогает сохранить зуб на долгие годы.</p>
+          <p>В «Миро-Дент» работают эндодонтисты с большим опытом, которые регулярно проходят обучение и используют проверенные протоколы. Процедура проходит безболезненно и комфортно: микроскоп позволяет врачу работать максимально аккуратно, не травмируя окружающие ткани.</p>
+          <p class="news-cta">Запишитесь на лечение под микроскопом в Краснодаре: <a href="tel:+79885590303">+7 (988) 559-03-03</a>. Сохраним ваш зуб с ювелирной точностью.</p>
+        </div>
+      </details>
+
+      <details class="news-item reveal rl">
+        <summary><span class="kind">Статья</span><h3>Исправление прикуса брекетами</h3><span class="news-toggle"><span>Читать</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+        <div class="news-body">
+          <p>Красивая улыбка — это не только эстетика, но и здоровье всей зубочелюстной системы. Неровные зубы и неправильный прикус нередко становятся причиной повышенной стираемости эмали, проблем с дёснами и даже головных болей. В стоматологии «Миро-Дент» в Краснодаре мы предлагаем современные методы ортодонтического лечения, которые делают процесс максимально комфортным и предсказуемым.</p>
+          <p>Лечение начинается с тщательной диагностики. Мы проводим 3D-сканирование челюстей, рассчитываем точное положение каждого зуба и моделируем конечный результат до начала лечения. Вы заранее знаете, сколько времени займёт лечение и каким будет результат.</p>
+          <p>Наши врачи-ортодонты регулярно повышают квалификацию. Современные брекет-системы Damon Clear и Damon Q позволяют корректировать прикус быстрее и с меньшим дискомфортом, чем классические лигатурные системы. Для детей и подростков также доступны съёмные аппараты, в том числе Марко Росса.</p>
+          <p>Врачи подробно объясняют каждый этап и сопровождают пациента до финального результата, включая рекомендации по ретенции, чтобы улыбка оставалась красивой надолго.</p>
+          <p class="news-cta">Запишитесь на консультацию ортодонта в Краснодаре: <a href="tel:+79885590303">+7 (988) 559-03-03</a>.</p>
+        </div>
+      </details>
+
+      <details class="news-item reveal rl d1">
+        <summary><span class="kind">Статья</span><h3>Лечение дёсен и профилактика</h3><span class="news-toggle"><span>Читать</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+        <div class="news-body">
+          <p>Кровоточивость при чистке зубов, неприятный запах изо рта, оголение шеек зубов и их подвижность — признаки гингивита и пародонтита. Эти заболевания являются одной из главных причин потери зубов во взрослом возрасте. В «Миро-Дент» лечат не симптомы, а причину воспаления, помогая остановить разрушение костной ткани и сохранить зубы.</p>
+          <p>Комплексный подход начинается с диагностики: зондирования пародонтальных карманов и оценки состояния костной ткани. Первый обязательный шаг — профессиональная гигиена с ультразвуковой чисткой для удаления поддесневых отложений. В более сложных случаях проводятся закрытый и открытый кюретаж, лоскутные операции, лазерная терапия и восстановление костной ткани.</p>
+          <p>Мы не только лечим, но и учим правильной домашней гигиене, чтобы результат сохранился надолго. Не ждите, пока зубы начнут шататься: ранняя диагностика заметно упрощает лечение.</p>
+          <p class="news-cta">Запишитесь на консультацию пародонтолога в Краснодаре: <a href="tel:+79885590303">+7 (988) 559-03-03</a>.</p>
+        </div>
+      </details>
+
+      <details class="news-item reveal rl d2">
+        <summary><span class="kind">Статья</span><h3>Профессиональная гигиена полости рта</h3><span class="news-toggle"><span>Читать</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+        <div class="news-body">
+          <p>Регулярная профессиональная чистка — фундамент здоровья полости рта. Даже при тщательной домашней гигиене на зубах остаётся налёт, который со временем превращается в зубной камень и становится причиной кариеса, гингивита и пародонтита.</p>
+          <p>Процедура включает несколько этапов. Ультразвуковой скалер бережно удаляет над- и поддесневые отложения. Затем Air Flow снимает пигментированный налёт от кофе, чая и других красителей. После этого эмаль шлифуют и полируют специальными пастами, а финальным этапом становится покрытие фторсодержащим лаком для укрепления эмали и снижения чувствительности.</p>
+          <p>Профессиональная гигиена раз в шесть месяцев помогает сохранить белизну улыбки и предупреждает стоматологические заболевания. После процедуры дёсны меньше кровоточат, исчезает неприятный запах, а зубы становятся заметно светлее.</p>
+        </div>
+      </details>
+
+      <details class="news-item reveal rl d3">
+        <summary><span class="kind">Статья</span><h3>Коронки, мосты и протезирование</h3><span class="news-toggle"><span>Читать</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+        <div class="news-body">
+          <p>Разрушенный или утраченный зуб — не только эстетическая проблема, но и риск для всей зубочелюстной системы. Соседние зубы начинают смещаться, нагрузка распределяется неправильно, что может привести к проблемам с прикусом и жеванием.</p>
+          <p>Для восстановления сильно разрушенного зуба используются керамические коронки E-max. Они пропускают свет, как натуральный зуб, и не имеют металлического каркаса. При отсутствии одного или нескольких зубов доступны мостовидные протезы и имплантация с последующей фиксацией коронок.</p>
+          <p>Если утрачено много зубов, решением может стать съёмное протезирование. Современные бюгельные, нейлоновые и акриловые протезы удобны, эстетичны и надёжно фиксируются. Конструкции изготавливаются в собственной зуботехнической лаборатории, что помогает контролировать качество и сроки.</p>
+          <p>Не откладывайте визит, даже если разрушен всего один зуб. На консультации врач предложит оптимальный план восстановления с учётом клинической ситуации и бюджета.</p>
+          <p class="news-cta">Запишитесь на консультацию по протезированию в Краснодаре: <a href="tel:+79885590303">+7 (988) 559-03-03</a>.</p>
+        </div>
+      </details>
+    </div>
+    <div class="reviews-more reveal">
+      <a class="btn btn-ghost" href="https://t.me/dentoklasskrd" target="_blank" rel="noopener">
+        Новости в Telegram-канале
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="#top"><img class="brand-mark" src="public/brand-mark.png" alt=""><span class="brand-wordmark"><small>стоматология</small><strong>Миро-Дент</strong><em>стоматологический центр</em></span></a>
+    <p>Информация не является публичной офертой. Имеются противопоказания — необходима консультация специалиста.</p>
+    <div class="footer-links">
+      <a href="https://vk.ru/dentoklasskrd" target="_blank" rel="noopener">ВКонтакте</a>
+      <a href="https://t.me/dentoklasskrd" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327/reviews/" target="_blank" rel="noopener">Отзывы</a>
+      <a href="https://yandex.ru/maps/org/miro_dent/179695455327" target="_blank" rel="noopener">Яндекс Карты</a>
+    </div>
+  </div>
+</footer>
+
+<div class="quick" id="quick">
+  <div class="fab-menu" id="fabMenu">
+    <a class="fab-item" href="tel:+79885590303" style="--c:var(--accent)"><span class="fab-label">Позвонить</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5 5 0 0 1 5 5M14.5 7a2 2 0 0 1 2 2M8 5l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 19l4 2a2 2 0 0 1-1 2.5A16.5 16.5 0 0 1 2 8 2 2 0 0 1 4.5 6z"/></svg></i></a>
+    <a class="fab-item" href="https://wa.me/79885590303" target="_blank" rel="noopener" style="--c:#25d366"><span class="fab-label">WhatsApp</span><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.88 9.88 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.17-1.24-6.16-3.48-8.4"/></svg></i></a>
+    <a class="fab-item" href="https://t.me/dentoklasskrd" target="_blank" rel="noopener" style="--c:#27a6e5"><span class="fab-label">Telegram</span><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.4 11.65 17 7.2c.55-.2 1.02.13.84.95l-1.97 9.3c-.15.66-.54.82-1.09.51l-3-2.21-1.45 1.4c-.16.16-.3.29-.6.29l.21-3.06 5.57-5.03c.24-.21-.05-.33-.38-.12l-6.88 4.33-2.97-.93c-.64-.2-.66-.64.13-.95z"/></svg></i></a>
+    <a class="fab-item" href="https://vk.ru/dentoklasskrd" target="_blank" rel="noopener" style="--c:#0077ff"><span class="fab-label">ВКонтакте</span><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.79 7.3H4.05c.13 6.24 3.25 9.99 8.72 9.99h.31v-3.57c2.01.2 3.53 1.67 4.14 3.57h2.84c-.78-2.84-2.83-4.41-4.11-5.01 1.28-.74 3.08-2.54 3.51-4.98h-2.58c-.56 1.98-2.22 3.78-3.8 3.95V7.3H10.5v6.92c-1.6-.4-3.62-2.34-3.71-6.92Z"/></svg></i></a>
+  </div>
+  <button class="fab-toggle" id="fabToggle" type="button" aria-label="Связаться с нами" aria-expanded="false" aria-controls="fabMenu">
+    <svg class="fab-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3 21l1.4-5.4A8.5 8.5 0 1 1 21 12z"/></svg>
+    <svg class="fab-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <a class="up" href="#top" aria-label="Наверх"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button id="lb-close" aria-label="Закрыть">×</button>
+  <img id="lb-img" alt="Просмотр фотографии">
+</div>
+
+<script>
+(function(){
+  document.documentElement.className='js';
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- preloader + hero reveal (layer 1: photo, layer 2: text) ---- */
+  var pre=document.getElementById('preloader'),
+      plBar=document.getElementById('plBar'),
+      plPct=document.getElementById('plPct'),
+      hero=document.querySelector('.hero'),
+      started=false;
+
+  function startHero(){
+    if(started)return; started=true;
+    pre.classList.add('done');
+    hero.classList.add('ready');
+  }
+  if(reduce){
+    if(plPct)plPct.textContent='100%';
+    startHero();
+  }else{
+    // animate the % readout alongside the CSS bar
+    var t0=performance.now(),dur=430;
+    (function pct(now){
+      var p=Math.min((now-t0)/dur,1);
+      if(plPct)plPct.textContent=Math.round(p*100)+'%';
+      if(p<1)requestAnimationFrame(pct);
+    })(t0);
+    var kick=function(){setTimeout(startHero,380);};
+    if(document.readyState==='complete')kick();
+    else addEventListener('load',kick);
+    setTimeout(startHero,1700); // hard failsafe
+  }
+
+
+  /* ---- header compact ---- */
+  var header=document.getElementById('header');
+  var sentinel=document.createElement('div');
+  sentinel.style.cssText='position:absolute;top:0;height:40px;width:1px';
+  document.body.prepend(sentinel);
+  new IntersectionObserver(function(e){
+    header.classList.toggle('compact',!e[0].isIntersecting);
+  }).observe(sentinel);
+
+  /* ---- reveal on scroll (alternating direction + delay via classes) ---- */
+  var els=document.querySelectorAll('.reveal');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+    });
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el);});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},3000);
+
+  /* ---- count-up for significant numbers (layer 3) ---- */
+  function countUp(el){
+    var target=parseFloat(el.dataset.count),
+        dec=+(el.dataset.dec||0),
+        suf=el.dataset.suf||'',
+        t0=null,dur=1500;
+    function fmt(v){return (dec?v.toFixed(dec).replace('.',','):Math.round(v).toString())+suf;}
+    function tick(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);
+      el.textContent=fmt(target*e);
+      if(p<1)requestAnimationFrame(tick); else el.textContent=fmt(target);
+    }
+    requestAnimationFrame(tick);
+  }
+  var cio=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      en.target.querySelectorAll('[data-count]').forEach(function(b){
+        if(reduce){
+          var d=+(b.dataset.dec||0);
+          b.textContent=(d?parseFloat(b.dataset.count).toFixed(d).replace('.',','):b.dataset.count)+(b.dataset.suf||'');
+        }else countUp(b);
+      });
+      cio.unobserve(en.target);
+    });
+  },{threshold:.4});
+  document.querySelectorAll('.metrics,.review-summary').forEach(function(s){cio.observe(s);});
+
+  /* ---- scrollspy: active nav link ---- */
+  var navlinks={};
+  document.querySelectorAll('.nav a[href^="#"]').forEach(function(a){navlinks[a.getAttribute('href').slice(1)]=a;});
+  var spy=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        Object.keys(navlinks).forEach(function(k){navlinks[k].classList.toggle('active',k===en.target.id);});
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  ['services','team','akcii','reviews','faq'].forEach(function(id){
+    var s=document.getElementById(id); if(s)spy.observe(s);
+  });
+
+  /* ---- hero central widget → next section ---- */
+  var hs=document.getElementById('heroScroll');
+  if(hs)hs.onclick=function(){
+    var t=document.getElementById('services');
+    if(t)t.scrollIntoView({behavior:reduce?'auto':'smooth'});
+  };
+
+  /* ---- work sliders (vanilla, no deps) ---- */
+  document.querySelectorAll('[data-slider]').forEach(function(root){
+    var track=root.querySelector('.wslider-track'),
+        slides=Array.prototype.slice.call(track.children),
+        dotsWrap=root.querySelector('.wslider-dots'),
+        prev=root.querySelector('.wslider-arrow.prev'),
+        next=root.querySelector('.wslider-arrow.next'),
+        i=0;
+    slides.forEach(function(_,n){
+      var d=document.createElement('button');
+      d.type='button';
+      d.setAttribute('aria-label','Фото '+(n+1));
+      if(n===0)d.className='active';
+      d.onclick=function(){go(n);};
+      dotsWrap.appendChild(d);
+    });
+    var dots=Array.prototype.slice.call(dotsWrap.children);
+    function go(n){
+      i=(n+slides.length)%slides.length;
+      track.style.transform='translateX(-'+(i*100)+'%)';
+      dots.forEach(function(d,k){d.classList.toggle('active',k===i);});
+    }
+    if(prev)prev.onclick=function(){go(i-1);};
+    if(next)next.onclick=function(){go(i+1);};
+
+    var startX=0,startY=0,dragging=false,moved=false;
+    track.addEventListener('pointerdown',function(e){startX=e.clientX;startY=e.clientY;dragging=true;moved=false;});
+    track.addEventListener('pointermove',function(e){
+      if(!dragging)return;
+      if(Math.abs(e.clientX-startX)>Math.abs(e.clientY-startY)&&Math.abs(e.clientX-startX)>6)moved=true;
+    });
+    track.addEventListener('pointerup',function(e){
+      if(!dragging)return;
+      dragging=false;
+      var dx=e.clientX-startX;
+      if(moved&&Math.abs(dx)>40)go(i+(dx<0?1:-1));
+    });
+    track.addEventListener('click',function(e){
+      if(moved){e.preventDefault();e.stopPropagation();}
+    },true);
+  });
+
+  /* ---- patient stories slider (fade + auto height) ---- */
+  document.querySelectorAll('[data-pstories]').forEach(function(root){
+    var vp=root.querySelector('.pstory-viewport'),
+        slides=Array.prototype.slice.call(vp.children),
+        dotsWrap=root.querySelector('.pstory-dots'),
+        prev=root.querySelector('.pstory-arrow.prev'),
+        next=root.querySelector('.pstory-arrow.next'),
+        count=root.querySelector('.pstory-count'),
+        i=0;
+    slides.forEach(function(_,n){
+      var d=document.createElement('button');
+      d.type='button';
+      d.setAttribute('aria-label','Специалист '+(n+1));
+      if(n===0)d.className='active';
+      d.onclick=function(){go(n);};
+      dotsWrap.appendChild(d);
+    });
+    var dots=Array.prototype.slice.call(dotsWrap.children);
+    function setH(){vp.style.height=slides[i].offsetHeight+'px';}
+    function go(n){
+      i=(n+slides.length)%slides.length;
+      slides.forEach(function(s,k){s.classList.toggle('active',k===i);});
+      dots.forEach(function(d,k){d.classList.toggle('active',k===i);});
+      if(count)count.textContent=(i+1)+' / '+slides.length;
+      setH();
+    }
+    if(prev)prev.onclick=function(){go(i-1);};
+    if(next)next.onclick=function(){go(i+1);};
+    setH();
+    addEventListener('resize',setH,{passive:true});
+    addEventListener('load',setH);
+    vp.querySelectorAll('img').forEach(function(im){im.addEventListener('load',setH);});
+
+    var sx=0,sy=0,drag=false,moved=false;
+    vp.addEventListener('pointerdown',function(e){sx=e.clientX;sy=e.clientY;drag=true;moved=false;});
+    vp.addEventListener('pointermove',function(e){
+      if(drag&&Math.abs(e.clientX-sx)>Math.abs(e.clientY-sy)&&Math.abs(e.clientX-sx)>6)moved=true;
+    });
+    vp.addEventListener('pointerup',function(e){
+      if(!drag)return;
+      drag=false;
+      var dx=e.clientX-sx;
+      if(moved&&Math.abs(dx)>40)go(i+(dx<0?1:-1));
+    });
+    vp.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();}},true);
+  });
+
+  /* ---- floating contact menu ---- */
+  var quick=document.getElementById('quick'),fabT=document.getElementById('fabToggle');
+  if(fabT){
+    fabT.onclick=function(e){e.stopPropagation();var o=quick.classList.toggle('open');fabT.setAttribute('aria-expanded',o);};
+    document.addEventListener('click',function(e){if(!quick.contains(e.target)){quick.classList.remove('open');fabT.setAttribute('aria-expanded','false');}});
+    addEventListener('keydown',function(e){if(e.key==='Escape'){quick.classList.remove('open');fabT.setAttribute('aria-expanded','false');}});
+  }
+
+  /* ---- lightbox ---- */
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img');
+  document.querySelectorAll('[data-photo]').forEach(function(b){
+    b.onclick=function(){lbImg.src=b.dataset.photo;lb.hidden=false;};
+  });
+  var close=function(){lb.hidden=true;lbImg.removeAttribute('src');};
+  document.getElementById('lb-close').onclick=close;
+  lb.onclick=function(e){if(e.target===lb)close();};
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});
+})();
+</script>
+</body>
+</html>
